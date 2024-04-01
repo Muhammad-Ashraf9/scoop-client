@@ -62,15 +62,21 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-xl fixed-top bg-dark border-bottom border-body" data-bs-theme="dark">
         <div className="container-fluid">
-          <a className="navbar-brand brand" href="#">Offcanvas navbar</a>
+          <div className='NavHeader '>
+            <div>
+            <a className="navbar-brand brand" href="#">Offcanvas navbar</a>
+            </div>
           <div className='NI BrandName '>
           <a  href='#'>Scoop Supplements</a>
           </div>
+          <div>
           <a className="navbar-toggler border-0"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span className="menueLogo"> 
             <FontAwesomeIcon icon={faBars} />
             </span>
           </a>
+          </div>
+          </div>
           <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
@@ -96,8 +102,13 @@ function Navbar() {
                 </div>
               </ul>
             </div>
-          </div>       
-          <form className="d-flex my-2 search" role="search">
+          </div>    
+          <div></div>
+          <div className='Invisible'>
+              easterEgg
+          </div>
+          <div className='search'>
+          <form className="d-flex my-2 " role="search">
                 <input className="form-control mx-2" type="search" placeholder="Search" aria-label="Search"></input>
                 <select className="form-select" aria-label="Default select example">
                   <option selected>All Categories</option>
@@ -106,7 +117,8 @@ function Navbar() {
                   <option value="3">Three</option>
                 </select>
           </form>
-          <div className="NI ms-5">
+          </div>   
+          <div className="NI Sign ms-5">
             <a href='#'><span className='me-2'><FontAwesomeIcon icon={faUserNinja} /></span>SIGN IN / REGISTER </a>
 
             <a href='#' className='mx-3'>  <FontAwesomeIcon icon={faHeart} /></a>

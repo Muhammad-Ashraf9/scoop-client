@@ -23,21 +23,57 @@
 .BrandName{
   display: none;
 }
-
+.Invisible{
+  visibility: hidden;
+}
 
 .search{
   min-width: max-content;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+  .NavHeader{
+    display: flex;
+    width: 100vw;
+    justify-content:  space-between;
+    /* margin-bottom:5px;
+    margin-top:5px; */
+    padding: 5px;
+  }
+  .NavHeader div{
+    display: inline-block;
+  }
+  
    .BrandName {
     display: block;
-     margin-left: 8vw;
-  } 
 
-  .togBtn {
-    float: right;
-    padding-left: 10000px;
+  } 
+  .Sign{
+  }
+  .search{
+    display: block ;
+    justify-content: center;
   }
 
 
 }
+@media screen and (max-width: 770px) {
+  .Invisible{
+    display: none;
+  }
+}
+@media screen and (max-width: 698px) {
+
+  
+   .BrandName {
+    display: block;
+
+  } 
+  .Sign{
+    display: none;
+  }
+  .search{
+    display: none ;
+  }
+  
+}
+
