@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <h2></h2>
+      <ProductList />
       <Footer />
     </>
   );
