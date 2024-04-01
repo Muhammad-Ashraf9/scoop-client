@@ -1,3 +1,7 @@
+
+import ProductList from "./components/ProductList";
+
+
 import { useState,useEffect } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,7 +17,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <h2></h2>
+      <ProductList />
       <Footer />
     </>
   )
@@ -127,7 +131,7 @@ function Navbar() {
         </div>
       </nav>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
