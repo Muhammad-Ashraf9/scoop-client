@@ -5,6 +5,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import ProductList from "./components/ProductList";
 
 //const element = <FontAwesomeIcon icon={faEnvelope} />
 
