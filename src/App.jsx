@@ -1,3 +1,7 @@
+
+import ProductList from "./components/ProductList";
+
+
 import { useState,useEffect } from 'react'
 import './App.css'
 import Logo  from './assets/Logo.png'
@@ -21,9 +25,10 @@ function App() {
 
   return (
     <>
-{    console.log(Logo)
-}      <Navbar />
+      <Navbar />
       <Carousel />
+      <ProductList />
+     
       <Footer />
     </>
   )
@@ -252,4 +257,4 @@ function CoolButton({Title}){
     Title: 'Shop Now',
   }
 
-export default App
+export default App;
