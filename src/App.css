@@ -27,6 +27,15 @@
   visibility: hidden;
 }
 
+.btn.btn-skew{
+  -webkit-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+
+.btn.btn-skew:hover{
+  background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+}
+
 .search{
   min-width: max-content;
 }

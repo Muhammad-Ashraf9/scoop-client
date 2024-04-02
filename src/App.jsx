@@ -6,6 +6,7 @@ import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import ProductList from "./components/ProductList";
+import SideCart from "./SideCart";
 
 //const element = <FontAwesomeIcon icon={faEnvelope} />
 
@@ -33,6 +34,9 @@ function Footer() {
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,6 +63,7 @@ function Navbar() {
 
   return (
     <>
+      <SideCart handleClose={handleClose} show={show} />
       <nav
         className="navbar navbar-expand-xl fixed-top bg-dark border-bottom border-body"
         data-bs-theme="dark"
@@ -132,9 +137,8 @@ function Navbar() {
                     Clothes
                   </a>
                   <ul
-                    className={`text-danger dropdown-menu ${
-                      isOpen ? "show" : ""
-                    }`}
+                    className={`text-danger dropdown-menu ${isOpen ? "show" : ""
+                      }`}
                     aria-labelledby="navbarDropdownMenuLink"
                   >
                     <li>
@@ -190,7 +194,7 @@ function Navbar() {
               {" "}
               <FontAwesomeIcon icon={faHeart} />
             </a>
-            <a href="#">
+            <a href="#" onClick={handleShow}>
               <FontAwesomeIcon icon={faBagShopping} />
             </a>
           </div>
