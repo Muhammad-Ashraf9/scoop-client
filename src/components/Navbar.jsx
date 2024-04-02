@@ -6,6 +6,7 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -167,12 +168,12 @@ export default function Navbar() {
             </form>
           </div>
           <div className="NI Sign ms-5">
-            <a className="Signin" href="#">
+            <NavLink className="Signin" to="/login">
               <span className="me-2 ">
                 <FontAwesomeIcon icon={faUserNinja} />
               </span>
               SIGN IN
-            </a>
+            </NavLink>
 
             <a href="#" className="mx-3">
               {" "}
