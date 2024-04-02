@@ -2,7 +2,7 @@ import ProductList from "./components/ProductList";
 import './App.css'
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
-import Navbar from './components/NavBar';
+import Navbar from './components/Navbar';
 //const element = <FontAwesomeIcon icon={faEnvelope} />
 
 function App() {
