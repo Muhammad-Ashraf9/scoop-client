@@ -1,9 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+}
+/*NavBar*/
 .NI{
   min-width: max-content;
 }
@@ -30,6 +36,13 @@
 .search{
   min-width: max-content;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 1220px){
+  .Sign{
+    margin-right: 20px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .NavHeader{
     display: flex;
@@ -46,8 +59,6 @@
    .BrandName {
     display: block;
 
-  } 
-  .Sign{
   }
   .search{
     display: block ;
@@ -56,14 +67,20 @@
 
 
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 775px) {
   .Invisible{
     display: none;
   }
+  .Canvas{
+    display: flex;
+  }
 }
-@media screen and (max-width: 698px) {
+@media screen and (max-width: 639px) {
 
-  
+  .canvasItem{
+    /* background-color: #DA0037; */
+    font-size: 40px;
+  }
    .BrandName {
     display: block;
 
@@ -76,4 +93,3 @@
   }
   
 }
-
