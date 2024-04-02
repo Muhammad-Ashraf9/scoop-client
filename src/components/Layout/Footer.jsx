@@ -7,9 +7,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapLocation } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export  function Footer() {
+export function Footer() {
   return (
     <>
       <footer>
