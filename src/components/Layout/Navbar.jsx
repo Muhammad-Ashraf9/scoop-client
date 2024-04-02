@@ -7,7 +7,7 @@ import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 
-export default function Navbar() {
+export  function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 

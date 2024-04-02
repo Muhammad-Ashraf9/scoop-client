@@ -1,8 +1,9 @@
-import ProductList from "./components/ProductList";
+import ProductList from "./Components/ProductList";
 import './App.css'
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Carousel from './Components/Carousel';
+import { Footer } from "./Components";
+import { Navbar } from "./Components";
+import {Faq} from "./Pages/Home/index"
 //const element = <FontAwesomeIcon icon={faEnvelope} />
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Carousel />
       <ProductList />   
+      <Faq />
       <Footer />
     </>
   );
