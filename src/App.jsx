@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 
-import Login from "./Pages/Login";
-import PageNotFound from "./Pages/PageNotFound";
-import { HomePage } from "./Pages/Home/";
+import Login from "./pages/Login";
+import PageNotFound from "./pages/PageNotFound";
+import { HomePage } from "./pages/Home/";
 import { ProductList } from "./components";
 
 function App() {

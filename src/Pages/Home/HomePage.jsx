@@ -8,7 +8,7 @@ export function HomePage() {
       <Navbar />
       <Carousel />
       <Faq />
-      <Review/>
+      <Review />
       <Footer />
     </>
   );
