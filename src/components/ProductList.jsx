@@ -70,7 +70,7 @@ function chunk(array, size) {
   return chunkedArr;
 }
 
-export default function ProductList() {
+export  function ProductList() {
   const chunkedProductList = chunk(list, 3); // Chunk the list into groups of 3
 
   return (
