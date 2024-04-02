@@ -1,95 +1,160 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap");
+/* These CSS variables are global, so they are available in all CSS modules */
+:root {
+  /* Primary Color */
+  --primary-color: #da0037;
+  --primary-light: #ff4d6d;
+  --primary-dark: #b00026;
+  --primary-gradient: linear-gradient(to right, #da0037, #ff4d6d);
+
+  /* Secondary Color */
+  --secondary-color: #ffc107; /* Amber */
+  --secondary-light: #ffd54f;
+  --secondary-dark: #ffa000;
+  --secondary-gradient: linear-gradient(to right, #ffc107, #ffd54f);
+
+  /* Tertiary Color */
+  --tertiary-color: #2196f3; /* Blue */
+  --tertiary-light: #6ec6ff;
+  --tertiary-dark: #0d47a1;
+  --tertiary-gradient: linear-gradient(to right, #2196f3, #6ec6ff);
+
+  /* Grayscale Colors */
+  --gray-color: #eaeaea;
+  --gray-light: #ffffff;
+  --gray-dark: #4c4c4c;
+  --gray-gradient: linear-gradient(to right, #eaeaea, #ffffff);
+
+  /* Black and White */
+  --black-color: #000000;
+  --white-color: #ffffff;
+
+  /* Box Shadow */
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Transition */
+  --transition: all 0.3s ease-in-out;
+
+  /* Border Radius */
+  --border-radius: 0.25rem;
+}
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* font-size: 62.5%; */
   box-sizing: border-box;
 }
-#root{
+
+body {
+  font-family: "open sans", sans-serif;
+  color: var(--gray-dark);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100vw;
 }
 /*NavBar*/
-.NI{
+.NI {
   min-width: max-content;
 }
-.NI a{
+.NI a {
   color: white;
   font-size: 18px;
 }
-.NI a:hover{
-  color: #DA0037  ;
+.NI a:hover {
+  color: #da0037;
 }
-.menueLogo{
-    color: white;
+.menueLogo {
+  color: white;
 }
-.menueLogo:hover{
-    color: #DA0037  ;
+.menueLogo:hover {
+  color: #da0037;
 }
-.BrandName{
+.BrandName {
   display: none;
 }
-.Invisible{
+.Invisible {
   visibility: hidden;
 }
 
-.search{
+.search {
   min-width: max-content;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1220px){
-  .Sign{
+@media screen and (max-width: 1220px) {
+  .Sign {
     margin-right: 20px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .NavHeader{
+  .NavHeader {
     display: flex;
     width: 100vw;
-    justify-content:  space-between;
+    justify-content: space-between;
     /* margin-bottom:5px;
     margin-top:5px; */
     padding: 5px;
   }
-  .NavHeader div{
+  .NavHeader div {
     display: inline-block;
   }
-  
-   .BrandName {
-    display: block;
 
+  .BrandName {
+    display: block;
   }
-  .search{
-    display: block ;
+  .search {
+    display: block;
     justify-content: center;
   }
+}
 
-
+.btn-gradient-primary {
+  background: var(--primary-gradient);
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.btn-gradient-primary:hover {
+  /* background: var(--primary-dark); */
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
 }
 @media screen and (max-width: 775px) {
-  .Invisible{
+  .Invisible {
     display: none;
   }
-  .Canvas{
+  .Canvas {
     display: flex;
   }
 }
 @media screen and (max-width: 639px) {
-
-  .canvasItem{
+  .canvasItem {
     /* background-color: #DA0037; */
     font-size: 40px;
   }
-   .BrandName {
+  .BrandName {
     display: block;
-
-  } 
-  .Sign{
+  }
+  .Sign {
     display: none;
   }
-  .search{
-    display: none ;
+  .search {
+    display: none;
   }
-  
 }
