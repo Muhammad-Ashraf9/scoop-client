@@ -1,6 +1,6 @@
 import "./Carousel.css";
 import CoolButton from "./CoolButton";
-export default function Carousel(){
+export  function Carousel(){
     return(
       <>
       <div id="HeaderCarousel" className="carousel slide carousel-fade mt-5 ">

@@ -1,20 +1,18 @@
-import ProductList from "./components/ProductList";
-import "./App.css";
-import Carousel from "./components/Carousel";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Login from "./pages/Login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+
+import "./App.css";
+
+import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
-//const element = <FontAwesomeIcon icon={faEnvelope} />
+import { HomePage } from "./pages/Home/";
+import { ProductList } from "./components";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<HomePage />} />
           <Route path="login" element={<Login />} />
           <Route path="products" element={<ProductList />} />
           <Route path="*" element={<PageNotFound />} />

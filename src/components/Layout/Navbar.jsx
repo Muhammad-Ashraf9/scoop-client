@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export  function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 

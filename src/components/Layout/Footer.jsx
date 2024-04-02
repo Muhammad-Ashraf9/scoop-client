@@ -9,7 +9,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapLocation } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../assets/Logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export default function Footer() {
+export  function Footer() {
   return (
     <>
       <footer>
