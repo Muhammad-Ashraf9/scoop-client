@@ -13,7 +13,7 @@ import { Footer } from "./components/Layout/Footer";
 function App() {
   return (
     <div>
-      {/* <Navbar/> */}
+      {/* <Navbar /> */}
      <main>
       <AllRoutes />
      </main>
