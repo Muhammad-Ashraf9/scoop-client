@@ -1,24 +1,24 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router , Navigate, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 
-import Login from "./pages/Login";
-import PageNotFound from "./pages/PageNotFound";
-import { HomePage } from "./pages/Home/";
-import { ProductList } from "./components";
+import Login from "./Pages/Login";
+import PageNotFound from "./Pages/PageNotFound";
+import { HomePage } from "./Pages/Home/";
+import { ProductList } from "./Pages/Product";
+import { AllRoutes } from "./routes/AllRoutes";
+import { Navbar } from "./components/Layout/Navbar";
+import { Footer } from "./components/Layout/Footer";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path="login" element={<Login />} />
-          <Route path="products" element={<ProductList />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <div>
+      {/* <Navbar/> */}
+     <main>
+      <AllRoutes />
+     </main>
+     <Footer/>
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../components/Acc.css'
+import './Acc.css'
 
 export const Accordion = ({ faqs }) => {
     const [expandedItem, setExpandedItem] = useState(0);
