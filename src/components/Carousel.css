@@ -3,9 +3,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 88px;
   }
   .CarouselImg{
-    height: 95vh;
+    height: 80vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,4 +19,10 @@
   }
   .img3{
     background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../src/assets/Img6.jpg);
+  }
+
+  @media screen and (max-width: 639px) {
+    #HeaderCarousel{
+      margin-top: 70px;
+    }
   }

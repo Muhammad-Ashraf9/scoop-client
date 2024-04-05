@@ -47,32 +47,32 @@ export function Navbar() {
                 <img width="200px" src={Logo} alt="logo" />
               </a>
             </div>
-            <div className="NI BrandName ">
+            <div className="NI BrandName mt-3">
               <a href="#">Scoop Supplements</a>
             </div>
-            <div>
+            <div className="mt-3">
               <a
-                className="navbar-toggler border-0"
+                className="navbar-toggler border-0 "
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar"
                 aria-label="Toggle navigation"
               >
-                <span className="menueLogo">
+                <span className="menueLogo fs">
                   <FontAwesomeIcon icon={faBars} />
                 </span>
               </a>
             </div>
           </div>
           <div
-            className="offcanvas offcanvas-end"
+            className="offcanvas offcanvas-end bg-dark"
             tabIndex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                Offcanvas
+              <h5 className="offcanvas-title text-white" id="offcanvasNavbarLabel">
+                Scoop Supplements
               </h5>
               <button
                 type="button"
@@ -83,37 +83,23 @@ export function Navbar() {
             </div>
             <div className="offcanvas-body Canvas">
               <ul className="navbar-nav me-auto mb-2 mt-lg-2 ">
-                <li className="NI canvasItem ms-3">
+                <li className="NI c-item canvasItem ms-3">
                   <a className="" aria-current="page" href="#">
                     HomePage
                   </a>
                 </li>
-                <li className="NI canvasItem ms-3">
+                <li className="NI c-item canvasItem ms-3">
                   <a className="" href="#">
                     Supplements
                   </a>
                 </li>
-                <div
-                  className="NI canvasItem dropdown togBtn"
+                <li
+                  className="NI canvasItem c-item dropdown togBtn"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <a
                     className=" dropdown-toggle ms-3"
-                    id="navbarDropdownMenuLink-1"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  ></a>
-                </div>
-                <div
-                  className="NI dropdown togBtn"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <a
-                    className=" dropdown-toggle"
                     id="navbarDropdownMenuLink-1"
                     href="#"
                     role="button"
@@ -127,22 +113,22 @@ export function Navbar() {
                     aria-labelledby="navbarDropdownMenuLink-1"
                   >
                     <li>
-                      <a className="dropdown-item mx-0" href="#">
+                      <a className="dropdown-item mx-0 d-item" href="#">
                         Bra
                       </a>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <a className="dropdown-item d-item" href="#">
                         Panty
                       </a>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <a className="dropdown-item d-item" href="#">
                         kalson
                       </a>
                     </li>
                   </ul>
-                </div>
+                </li>
               </ul>
             </div>
           </div>
