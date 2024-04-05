@@ -1,0 +1,109 @@
+/*NavBar*/
+.NI {
+    min-width: max-content;
+  }
+  .NI a {
+    color: white;
+    font-size: 18px;
+  }
+  .NI a:hover {
+    color: #da0037 ; 
+  }
+  .d-item{
+    color: #da0037 !important;
+  }
+  .d-item:hover{
+    color:black !important;
+  }
+  .menueLogo {
+    color: white;
+  }
+  .menueLogo:hover {
+    color: #da0037;
+  }
+  .BrandName {
+    display: none;
+  }
+  .Invisible {
+    visibility: hidden;
+  }
+  
+  .search {
+    min-width: max-content;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1220px) {
+    .Sign {
+      margin-right: 20px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .NavHeader {
+      display: flex;
+      width: 100vw;
+      justify-content: space-between;
+      /* margin-bottom:5px;
+      margin-top:5px; */
+      padding: 5px;
+    }
+    .NavHeader div {
+      display: inline-block;
+    }
+  
+    .BrandName {
+      display: block;
+    }
+    .search {
+      display: block;
+      justify-content: center;
+    }
+    .c-item{
+        margin-top: 30px;
+    }
+  }
+  
+  .btn-gradient-primary {
+    background: var(--primary-gradient);
+    color: var(--white-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  .btn-gradient-primary:hover {
+    /* background: var(--primary-dark); */
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+  }
+  @media screen and (max-width: 775px) {
+    .Invisible {
+      display: none;
+    }
+    .Canvas {
+      display: flex;
+    }
+
+  }
+  @media screen and (max-width: 639px) {
+    .canvasItem {
+      /* background-color: #DA0037; */
+      font-size: 40px;
+    }
+    .BrandName {
+      display: block;
+    }
+    .Sign {
+      display: none;
+    }
+    .search {
+      display: none;
+    }
+    .c-item{
+        margin-top: 0;
+    }
+
+  }
+  
