@@ -1,0 +1,21 @@
+.Content{
+    min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+}
+.Shipping{
+    background-color: #F9F1E7;
+}
+#placing{
+    background-color: #B88E2F;
+    color: white;
+}
+.total{
+    color: #B88E2F;
+}
+.empty{
+background-color:#F9F1E7 ;
+}
+.backs{
+    background-color: #B88E2F;
+}
