@@ -73,3 +73,8 @@ body {
 .btn.btn-skew:hover{
   background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
 }
+
+.custom-coupon-text{
+  color: #DA0037;
+  font-weight: bold;
+}
