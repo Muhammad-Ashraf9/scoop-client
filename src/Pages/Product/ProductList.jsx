@@ -1,64 +1,29 @@
 import "./ProductList.css";
-const list = [
+const productList = [
   {
-    id: 1,
-    title: "Product 1",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 2,
-    title: "Product 2",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 3,
-    title: "Product 3",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 4,
-    title: "Product 4",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 5,
-    title: "Product 5",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 6,
-    title: "Product 6",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 7,
-    title: "Product 7",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 8,
-    title: "Product 8",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 9,
-    title: "Product 9",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
-  },
-  {
-    id: 10,
-    title: "Product 10",
-    price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    id: 1, // Unique identifier for the product
+    title: "Product Name",
+    description: "This is a detailed description of the product.",
+    category: "Supplements", // Or "Sportswear"
+    subcategory: "Protein", // Or "Shirts", "Shorts", etc.
+    price: 29.99,
+    discountedPrice: 24.99, // Optional, for sales or promotions
+    images: [
+      "/src/images/3c08e55c8a3e17e888022d70934f49e7.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/Healthbox-Fitness-Addict-whey-protein-SDL781254375-1-e9111.jpg",
+      "/src/images/71xDEv3pJL._AC_SL1500_.jpg",
+      "/src/images/IMG_2805.jpg",
+    ],
+    sizes: ["S", "M", "L", "XL"], // For sportswear products
+    flavors: ["Chocolate", "Vanilla"], // For supplement products
+    inventory: 100,
+    tags: ["Whey", "Protein Powder", "Muscle Building"],
+    averageRating: 4.2, // Computed from reviews
+    numReviews: 25,
+    totalSales: 1000, // property to track total sales
+    createdAt: "2023-04-01T10:30:00Z",
+    updatedAt: "2023-04-05T15:45:00Z",
   },
 ];
 
@@ -70,31 +35,43 @@ function chunk(array, size) {
   return chunkedArr;
 }
 
-export  function ProductList() {
-  const chunkedProductList = chunk(list, 3); // Chunk the list into groups of 3
+export function ProductList() {
+  // Flatten the list of products into a list of images, preserving the product data
+  const imagesList = productList.flatMap((product) =>
+    product.images.map((image) => ({
+      ...product,
+      image, // add image as a property
+    }))
+  );
+
+  // Optional: Chunk the images list if needed
+  const chunkedImagesList = chunk(imagesList, 3); // Adjust the chunk size as per your requirement
 
   return (
     <div
       id="productCarousel"
       className="carousel carousel-dark slide m-auto col-12"
       data-bs-ride="carousel"
+      data-bs-interval="4000"
     >
       <div className="carousel-inner">
-        {chunkedProductList.map((productChunk, index) => (
+        {chunkedImagesList.map((imageChunk, index) => (
           <div
             className={`carousel-item ${index === 0 ? "active" : ""}`}
             key={index}
           >
             <div className="row justify-content-center">
-              {productChunk.map((product) => (
-                <div className="col-3" key={product.id}>
-                  <div className="card col-10 ">
+              {imageChunk.map((product, imageIndex) => (
+                <div className="col-4" key={imageIndex}>
+                  {" "}
+                  {/* Increase the width of the card by changing col-3 to col-4 */}
+                  <div className="card col-">
                     <img
                       src={product.image}
-                      className="card-img-top "
+                      className="card-img-top"
                       alt={product.title}
                     />
-                    <div className="card-body card-footer ">
+                    <div className="card-body card-footer">
                       <h5 className="card-title">{product.title}</h5>
                       <p className="card-text">Price: ${product.price}</p>
                       <a href="#" className="btn btn-primary">
@@ -109,24 +86,24 @@ export  function ProductList() {
         ))}
       </div>
       <button
-        className="carousel-control-prev  "
+        className="carousel-control-prev"
         type="button"
         data-bs-target="#productCarousel"
         data-bs-slide="prev"
       >
         <span
-          className="carousel-control-prev-icon  border-0"
+          className="carousel-control-prev-icon border-0"
           aria-hidden="true"
         ></span>
         <span className="visually-hidden">Previous</span>
       </button>
       <button
-        className="carousel-control-next  "
+        className="carousel-control-next"
         type="button"
         data-bs-target="#productCarousel"
         data-bs-slide="next"
       >
-        <span className="carousel-control-next-icon " aria-hidden="true"></span>
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
     </div>
