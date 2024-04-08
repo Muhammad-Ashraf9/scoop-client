@@ -1,73 +1,55 @@
 import  { useState } from "react";
 import { Form } from "react-bootstrap";
+import { Navbar } from "../../components/Layout/Navbar.jsx";
 import "./Checkout.css";
-
-var items=[
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHourglassEnd } from "@fortawesome/free-solid-svg-icons";
+import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
+import { faShieldHeart } from "@fortawesome/free-solid-svg-icons";
+import { faScroll } from "@fortawesome/free-solid-svg-icons";
+var cartItems=[
   {
     _id: 1, // Unique identifier for the product
     name: "Rainbow Six Siege shirt", // Name of the product
-    description: "a very good shirt.",
+    description: "a very good shirt that you can wear every where and everyday any thing i don't know what else to say but i will keep on writing.",
     category: "Sportswear", // Or "Sportswear ,Supplements"
     subcategory: "Shirts", // Or "Shirts", "Shorts", "Protein" etc.
-    price: 29.99,
-    discountedPrice: 24.99, // Optional, for sales or promotions
+    price: 400000,
+    //discountedPrice: 24.99, // Optional, for sales or promotions
     images: [
     "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,flatlay,101010:01c5ca27c6,front,wide_portrait,750x1000.webp",
     "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,two_models,101010:01c5ca27c6,front,tall_portrait,750x1000.1.webp"
     ],
-    sizes: ["S", "M", "L", "XL"], // For sportswear products
+    size: ["S"], // For sportswear products
     //flavors: ["Chocolate", "Vanilla"], // For supplement products
     inventory: 100,
-    tags: ["Whey", "Protein Powder", "Muscle Building"],
-    averageRating: 4.2, // Computed from reviews
-    numReviews: 25,
-    totalSales: 1000, // property to track total sales
-    createdAt: ("2023-04-01T10:30:00Z"), //ISODate,
-    updatedAt: ("2023-04-05T15:45:00Z")  //ISODate
+    //tags: ["Whey", "Protein Powder", "Muscle Building"],
+   // averageRating: 4.2, // Computed from reviews
+    //numReviews: 25,
+    //totalSales: 1000, // property to track total sales
+    //createdAt: ("2023-04-01T10:30:00Z"), //ISODate,
+    //updatedAt: ("2023-04-05T15:45:00Z")  //ISODate
     },
   {
-    _id: 1, // Unique identifier for the product
-    name: "Rainbow Six Siege shirt", // Name of the product
-    description: "a very good shirt.",
-    category: "Sportswear", // Or "Sportswear ,Supplements"
-    subcategory: "Shirts", // Or "Shirts", "Shorts", "Protein" etc.
-    price: 29.99,
-    discountedPrice: 24.99, // Optional, for sales or promotions
+    _id: 2, // Unique identifier for the product
+    name: "Protien Powder", // Name of the product
+    description: "a very good Powder.",
+    category: "Supplements", // Or "Sportswear ,Supplements"
+    subcategory: "Protein", // Or "Shirts", "Shorts", "Protein" etc.
+    price: 1500,
     images: [
-    "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,flatlay,101010:01c5ca27c6,front,wide_portrait,750x1000.webp",
-    "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,two_models,101010:01c5ca27c6,front,tall_portrait,750x1000.1.webp"
+    "https://www.nbs-supplements.com/wp-content/uploads/2024/04/Stenabolic_front-copy.webp",
+    "https://www.nbs-supplements.com/wp-content/uploads/2024/04/Stenabolic_front-copy.webp"
     ],
-    sizes: ["S", "M", "L", "XL"], // For sportswear products
-    //flavors: ["Chocolate", "Vanilla"], // For supplement products
+   // sizes: ["S", "M", "L", "XL"], // For sportswear products
+    flavor: "Chocolate", // For supplement products
     inventory: 100,
-    tags: ["Whey", "Protein Powder", "Muscle Building"],
-    averageRating: 4.2, // Computed from reviews
-    numReviews: 25,
-    totalSales: 1000, // property to track total sales
-    createdAt: ("2023-04-01T10:30:00Z"), //ISODate,
-    updatedAt: ("2023-04-05T15:45:00Z")  //ISODate
-    },
-  {
-    _id: 1, // Unique identifier for the product
-    name: "Rainbow Six Siege shirt", // Name of the product
-    description: "a very good shirt.",
-    category: "Sportswear", // Or "Sportswear ,Supplements"
-    subcategory: "Shirts", // Or "Shirts", "Shorts", "Protein" etc.
-    price: 29.99,
-    discountedPrice: 24.99, // Optional, for sales or promotions
-    images: [
-    "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,flatlay,101010:01c5ca27c6,front,wide_portrait,750x1000.webp",
-    "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,two_models,101010:01c5ca27c6,front,tall_portrait,750x1000.1.webp"
-    ],
-    sizes: ["S", "M", "L", "XL"], // For sportswear products
-    //flavors: ["Chocolate", "Vanilla"], // For supplement products
-    inventory: 100,
-    tags: ["Whey", "Protein Powder", "Muscle Building"],
-    averageRating: 4.2, // Computed from reviews
-    numReviews: 25,
-    totalSales: 1000, // property to track total sales
-    createdAt: ("2023-04-01T10:30:00Z"), //ISODate,
-    updatedAt: ("2023-04-05T15:45:00Z")  //ISODate
+   // tags: ["Whey", "Protein Powder", "Muscle Building"],
+   // averageRating: 4.2, // Computed from reviews
+    //numReviews: 25,
+    //totalSales: 1000, // property to track total sales
+    //createdAt: ("2023-04-01T10:30:00Z"), //ISODate,
+    //updatedAt: ("2023-04-05T15:45:00Z")  //ISODate
     },
     
 ];
@@ -86,6 +68,7 @@ export function Checkout() {
 
   return (
     <>
+    <Navbar/>
       <div className="Content">
         <div id="all">
           <div id="content" className="container ">
@@ -113,7 +96,7 @@ export function Checkout() {
                       />
                       <div className="valid-feedback">Cool name!</div>
                       <div className="invalid-feedback">
-                        Please enter your name.
+                        Please enter your first name.
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -144,6 +127,7 @@ export function Checkout() {
                         id="userAddress"
                         required
                       />
+                      <div className="valid-feedback">Looks good!</div>
                       <div className="invalid-feedback">
                         Please provide a valid Address.
                       </div>
@@ -260,7 +244,7 @@ export function Checkout() {
                   <div className="rounded-4 p-4 row g-2 my-3 Shipping">
                     <span className="fs-4">Order Details</span>
                     <div id="items" className=" p-3 d-flex flex-column gap-3">
-                      {items.map(item => {
+                      {cartItems.map(item => {
                         return (<>
                         <div id={item._id} className="card lg-auto">
                         <div className="row g-0">
@@ -276,14 +260,31 @@ export function Checkout() {
                               {/* <!-- Information --> */}
                               <div className="col-sm-7 flex-grow-1">
                                 <h5 className="card-title">{item.name}</h5>
-                                <p className="card-text">{item.description}</p>
-                                <p className="card-text">
+                                <p className="card-text mb-2">{item.description}</p>
+                                {item.size!=null ? <p className="card-text my-0">
+                                  Size : {" "}
                                   <small className="text-body-secondary">
-                                    {item.name} only {item.inventory} left in
+                                    {item.size}
+                                  </small>
+                                </p> : ""}
+                                {item.flavor!=null ? <p className="card-text my-0">
+                                  Flavor : {" "}
+                                  <small className="text-body-secondary">
+                                    {item.flavor}
+                                  </small>
+                                </p> : ""}
+                                <p className="card-text my-0">
+                                  <small className="text-body-secondary">
+                                    only {item.inventory} left in
                                     the stock
                                   </small>
                                 </p>
-                              </div>
+                                <p className="card-text my-0">
+                                Category : 
+                                  <small className="text-body-secondary ms-1">
+                                    {item.category} - {item.subcategory}
+                                  </small>
+                                </p>                              </div>
                               {/*<!-- End of information -->
                               <!-- Controls --> */}
                               <div className="col-5 pt-4 text-center">
@@ -317,7 +318,7 @@ export function Checkout() {
                     className=" rounded-4 text-dark  p-4 mb-3 bgPaige "
                   >
                     <div className="fs-5">
-                     <p className="fs-2 ">Order Summary</p>
+                     <p className="fs-2 title ">Order Summary</p>
                     <div className="d-flex justify-content-between ">
                       <span id="numOfItems">Number of Items</span>
                       <span id="SubTotal">15</span>
@@ -340,37 +341,22 @@ export function Checkout() {
                       <h3>Total</h3>
                       <h3 id="AfterTax">200</h3>
                     </div>
-                    {/* <ul className="CheckoutPayment fs-5">
-                      <li>
-                        <input  id="paymentMethodCod" type="radio" className="Radio" name="paymentMethod" value="cod" required />
-                        <label htmlFor="paymentMethodCod">Cash on delivery</label>
-                        {/* <div className="PaymentBox PCod">
-                        Pay with cash upon delivery.
-                        </div> 
-                     </li>
-                      <li>
-                        <input id="paymentMethodCredit" type="radio" className="Radio" name="paymentMethod" value="credit" />
-                        <label htmlFor="paymentMethodCredit">Visa / Mastercard</label>
-                        {/* <div className="PaymentBox PCredit">
-                          Pay with your credit card.
-                        </div> 
-                      </li>
-                      <li>
-                        <input id="paymentMethodMobile" type="radio" className="Radio" name="paymentMethod" value="mobile" />
-                        <label htmlFor="paymentMethodMobile"> Mobile Wallet</label>
-                        {/* <div className="PaymentBox PMonile">
-                          Pay with your Mobile Wallet.
-                        </div> 
-                      </li>
-                    </ul> */}
+                    <hr className="my-1" />
+                    <p className="mb-2 fs-5 title">The Scoop experience</p>
+                    <div className="exp ps-2">
+                        <p><span><FontAwesomeIcon icon={faHourglassEnd}/></span>14 Days guarantee</p>
+                        <p><span><FontAwesomeIcon icon={faTruckFast} /></span>Free Shipping</p>
+                        <p><span><FontAwesomeIcon icon={faShieldHeart} /></span>100% Secure Payment</p>
+                        <p><span><FontAwesomeIcon icon={faScroll} /></span>Free useage guideline </p>
+                    </div>
                     
-                    <button type="submit" id="placing" className="btn w-100">
+                    <button  type="submit" id="placing" className="btn w-100 mt-0">
                       Place Order
                     </button>
                     <p className="pt-3">
                       By placing your order, you agree to our company&apos;s{" "}
                       <strong>Privacy Policy</strong> and{" "}
-                      <strong>Conditions of use.&apos;</strong>
+                      <strong>Conditions of use.</strong>
                     </p>
                     <hr />
                    
