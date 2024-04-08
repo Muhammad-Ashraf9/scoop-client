@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function Footer() {
   return (
     <>
-      <footer>
+      <footer >
         <div className="footer-top ps-5 ">
           <div className="container-fluid">
             <div className="row">
