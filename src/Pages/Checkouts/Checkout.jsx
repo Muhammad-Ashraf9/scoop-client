@@ -81,7 +81,7 @@ export function Checkout() {
               >
                 <div className="col-lg-8 col-md-12">
                   <div className="rounded-4 p-4 row g-3 bgPaige">
-                    <span className="fs-4">Personal information:</span>
+                    <span className="fs-2 text-black">Personal information:</span>
                     <div className="col-md-6 ">
                       <label htmlFor="FirstName" className="form-label">
                         First name
@@ -168,7 +168,7 @@ export function Checkout() {
                   </div>
 
                   <div className="rounded-4 p-4 row g-3 bgPaige">
-                    <span className="fs-4">Shipping Details:</span>
+                    <span className="fs-2 text-black">Shipping Details:</span>
                     <div className="col-md-12 ">
                       <label htmlFor="streetAddress" className="form-label">
                         Street Address
@@ -318,7 +318,7 @@ export function Checkout() {
                     className=" rounded-4 text-dark  p-4 mb-3 bgPaige "
                   >
                     <div className="fs-5">
-                     <p className="fs-2 title ">Order Summary</p>
+                     <p className="fs-1 title ">Order Summary</p>
                     <div className="d-flex justify-content-between ">
                       <span id="numOfItems">Number of Items</span>
                       <span id="SubTotal">15</span>

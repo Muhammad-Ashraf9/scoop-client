@@ -24,7 +24,7 @@
     font-size: larger;
   }
   #placing:hover{
-    background-color: white;
+    background-color: white ;
     color: #da0037;
   }
   .total{
@@ -42,7 +42,8 @@
     top: 6rem;
   }
   .title{
-    color: #da0037;
+    color: black;
+    font-weight: bold;
   }
   .exp span{
     color: #da0037;
