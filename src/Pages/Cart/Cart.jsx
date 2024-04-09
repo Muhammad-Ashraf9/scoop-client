@@ -5,10 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { Navbar } from '../../components'
 
 export default function Cart() {
     return (
-        <div className="container">
+        <>
+        <Navbar />
+        <div className="container all">
             <div className="row gx-5">
                 <div className="col-8">
                     <div className="row">
@@ -106,5 +109,6 @@ export default function Cart() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
