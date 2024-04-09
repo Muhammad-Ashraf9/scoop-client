@@ -119,17 +119,17 @@ export function Navbar() {
                   >
                     <li>
                       <a className="dropdown-item mx-0 d-item" href="#">
-                        Bra
+                        Shirts
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item d-item" href="#">
-                        Panty
+                        Pants
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item d-item" href="#">
-                        kalson
+                        T-Shirts
                       </a>
                     </li>
                   </ul>

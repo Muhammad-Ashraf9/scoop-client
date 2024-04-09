@@ -9,8 +9,7 @@ function App() {
   return (
     <div>
       
-     <main>
-      
+     <main>     
       <AllRoutes />
      </main>
      <Footer/>

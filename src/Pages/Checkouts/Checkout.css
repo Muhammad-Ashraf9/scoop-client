@@ -1,13 +1,16 @@
 
 /* checkout */
-.Content{
-    min-height: 100vh;
-     display: flex;
-     flex-direction: column;
-     background-color: #4c4c4c;
-     color: #da0037;
-     
-  }
+#all{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #4c4c4c;
+  color: #da0037;
+}
+#checkoutForm{
+  margin-top: 110px;
+  
+}
   .Content label{
     color: #b00026;
   }
@@ -21,7 +24,7 @@
     font-size: larger;
   }
   #placing:hover{
-    background-color: white;
+    background-color: white ;
     color: #da0037;
   }
   .total{
@@ -37,6 +40,24 @@
   #placeOrder{
     position: sticky;
     top: 6rem;
+  }
+  .title{
+    color: black;
+    font-weight: bold;
+  }
+  .exp span{
+    color: #da0037;
+    margin-right: 15px;
+  }
+  @media screen and (max-width: 1200px) {
+    #checkoutForm{
+      margin-top: 140px;
+    }
+  }
+  @media screen and (max-width: 639px) {
+    #checkoutForm{
+      margin-top: 100px;
+    }
   }
   /* .CheckoutPayment li{
     list-style: none;
