@@ -5,9 +5,9 @@ import {
   Routes,
 } from "react-router-dom";
 import { HomePage } from "../pages/Home";
-import { ProductList } from "../pages/Product";
 import Login from "../pages/Login.jsx";
 import PageNotFound from "../pages/PageNotFound";
+import { ProductListFilters } from "../pages/Product/ProductList.jsx";
 
 export const AllRoutes = () => {
   return (
@@ -16,7 +16,8 @@ export const AllRoutes = () => {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="login" element={<Login />} />
-          <Route path="products" element={<ProductList />} />
+          ProductListFilters
+          <Route path="products" element={<ProductListFilters />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="Admin" element={<Navigate to="/" />} />
         </Routes>

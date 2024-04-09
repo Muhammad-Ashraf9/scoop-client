@@ -4,8 +4,10 @@ const productList = [
     id: 1, // Unique identifier for the product
     title: "Product Name",
     description: "This is a detailed description of the product.",
-    category: "Supplements", // Or "Sportswear"
-    subcategory: "Protein", // Or "Shirts", "Shorts", etc.
+    category: [
+      "Supplements", // Or "Sportswear"
+      "Protein",
+    ], // Or "Shirts", "Shorts", etc.
     price: 29.99,
     discountedPrice: 24.99, // Optional, for sales or promotions
     images: [
@@ -14,6 +16,7 @@ const productList = [
       "/src/images/Healthbox-Fitness-Addict-whey-protein-SDL781254375-1-e9111.jpg",
       "/src/images/71xDEv3pJL._AC_SL1500_.jpg",
       "/src/images/IMG_2805.jpg",
+      "/src/images/925917713s.jpg",
     ],
     sizes: ["S", "M", "L", "XL"], // For sportswear products
     flavors: ["Chocolate", "Vanilla"], // For supplement products
@@ -65,10 +68,11 @@ export function ProductList() {
                 <div className="col-4" key={imageIndex}>
                   {" "}
                   {/* Increase the width of the card by changing col-3 to col-4 */}
-                  <div className="card col-">
+                  <div className="card col-12">
                     <img
+                      id="productImage"
                       src={product.image}
-                      className="card-img-top"
+                      className="card-img-top m-auto "
                       alt={product.title}
                     />
                     <div className="card-body card-footer">
@@ -106,6 +110,49 @@ export function ProductList() {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
+    </div>
+  );
+}
+
+export function ProductListFilters() {
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: "20px",
+            }}
+          >
+            {/* Title on the left */}
+            <h2 style={{ fontWeight: "bold", fontSize: "24px" }}>
+              LATEST PRODUCTS
+            </h2>
+
+            {/* Buttons on the right */}
+            <div>
+              <button
+                className="btn btn-outline-dark"
+                style={{ marginRight: "5px" }}
+              >
+                Sale
+              </button>
+              <button className="btn btn-dark" style={{ marginRight: "5px" }}>
+                New Arrivals
+              </button>
+              <button className="btn btn-outline-dark">Latest</button>
+            </div>
+          </div>
+        </div>
+
+        {/* ProductList component */}
+        <div className="col-12">
+          <ProductList />
+        </div>
+      </div>
     </div>
   );
 }

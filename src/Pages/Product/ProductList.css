@@ -26,11 +26,12 @@
   object-fit: cover; /* Cover entire*/
   margin-bottom: 10px;
 
-  height: 25%; /* Maintain aspect ratio */
+  height: 250px; /* Maintain aspect ratio */
 }
 
 /* Adjust the card body styles */
-
+#productImage {
+}
 /* Optional: Add hover effect to the cards */
 
 .card:hover {
