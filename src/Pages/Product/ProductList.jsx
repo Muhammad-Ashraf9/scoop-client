@@ -66,21 +66,21 @@ export function ProductList() {
             <div className="row justify-content-center">
               {imageChunk.map((product, imageIndex) => (
                 <div className="col-4" key={imageIndex}>
-                  {" "}
-                  {/* Increase the width of the card by changing col-3 to col-4 */}
-                  <div className="card col-12">
-                    <img
-                      id="productImage"
-                      src={product.image}
-                      className="card-img-top m-auto "
-                      alt={product.title}
-                    />
-                    <div className="card-body card-footer">
-                      <h5 className="card-title">{product.title}</h5>
-                      <p className="card-text">Price: ${product.price}</p>
-                      <a href="#" className="btn btn-primary">
-                        Add to Cart
-                      </a>
+                  <div id="productCard" className="container-fluid  ">
+                    <div id="productCardContainer" className="card col-12">
+                      <img
+                        id="productImage"
+                        src={product.image}
+                        className="card-img-top m-auto "
+                        alt={product.title}
+                      />
+                      <div className="card-body card-footer">
+                        <h5 className="card-title">{product.title}</h5>
+                        <p className="card-text">Price: ${product.price}</p>
+                        <a href="#" className="btn btn-primary">
+                          Add to Cart
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -2,15 +2,18 @@
   margin-top: 5px;
   padding: 1rem;
   object-fit: cover; /* Cover entire*/
-  background-color: rgb(217, 209, 209);
+  background-color: rgb(201, 23, 23);
   margin-top: 5px;
   width: 100%;
+  margin-bottom: 10px;
+  height: 50px;
 }
 
 /* ProductList.css */
 .card {
   /* Adjust width and/or padding as needed */
-  width: 250px; /* Example fixed width */
+  width: 150px; /* Example fixed width */
+  height: 250px; /* Example fixed height */
   box-sizing: border-box;
   margin: 0 auto; /* Center the card in the column */
   margin-top: 10px; /* Add space between cards */
@@ -23,6 +26,7 @@
 /* Ensure the images within the cards resize appropriately */
 .card-img-top {
   width: 200px; /* Make image responsive within the card */
+  height: 100px;
   object-fit: cover; /* Cover entire*/
   margin-bottom: 10px;
 
@@ -31,27 +35,47 @@
 
 /* Adjust the card body styles */
 #productImage {
+  height: 150px;
+  width: 150px;
 }
 /* Optional: Add hover effect to the cards */
 
 .card:hover {
   box-shadow: 0 0 10px rgba(160, 41, 41, 0.2); /* Add shadow on hover */
 }
-
+#CardBottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: blue;
+}
 /* Add style to card button */
 .card .btn {
   display: flex;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   color: white;
   background: #141313;
   transition: 1s;
   box-shadow: 6px 6px 0 black;
   transform: skewX(-15deg);
 }
+#productCarousel {
+  height: 100vh;
+}
 
 .card .btn:hover {
   transform: translateY(-2px);
   box-shadow: var(--box-shadow-hover);
+}
+
+#productCard {
+  background-color: aqua;
+  height: 400px;
+}
+
+#productCardContainer {
+  background-color: black;
+  height: fit-content;
 }
