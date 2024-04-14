@@ -1,81 +1,191 @@
-.card-body {
-  margin-top: 5px;
-  padding: 1rem;
-  object-fit: cover; /* Cover entire*/
-  background-color: rgb(201, 23, 23);
-  margin-top: 5px;
-  width: 100%;
-  margin-bottom: 10px;
-  height: 50px;
-}
-
-/* ProductList.css */
 .card {
-  /* Adjust width and/or padding as needed */
-  width: 150px; /* Example fixed width */
-  height: 250px; /* Example fixed height */
+  height: auto; /* Let the height adjust to content */
   box-sizing: border-box;
-  margin: 0 auto; /* Center the card in the column */
-  margin-top: 10px; /* Add space between cards */
-  padding: 0; /* Remove padding */
-  display: flex; /* Enable flexbox */
+  margin: 1rem; /* Space around the cards */
+  display: flex;
+  flex-direction: column; /* Stack the card content vertically */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(85, 14, 14);
+  background-color: #eaeaea; /* Card background color */
+  color: #252a34;
+  border-radius: 8px; /* Rounded corners for the card */
+  flex: none; /* Do not grow or shrink */
+  width: 200px;
 }
 
-/* Ensure the images within the cards resize appropriately */
 .card-img-top {
-  width: 200px; /* Make image responsive within the card */
-  height: 100px;
-  object-fit: cover; /* Cover entire*/
-  margin-bottom: 10px;
-
-  height: 250px; /* Maintain aspect ratio */
+  width: 100%; /* Image takes the full width of the card */
+  height: auto; /* Height is auto to maintain the aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area */
+  border-top-left-radius: 8px; /* Rounded top corners */
+  border-top-right-radius: 8px;
 }
 
-/* Adjust the card body styles */
-#productImage {
-  height: 150px;
-  width: 150px;
-}
-/* Optional: Add hover effect to the cards */
-
-.card:hover {
-  box-shadow: 0 0 10px rgba(160, 41, 41, 0.2); /* Add shadow on hover */
-}
-#CardBottom {
+.card-body {
+  padding: 1rem; /* Spacing inside the card */
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  background-color: blue;
-}
-/* Add style to card button */
-.card .btn {
-  display: flex;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 10px;
-  color: white;
-  background: #141313;
-  transition: 1s;
-  box-shadow: 6px 6px 0 black;
-  transform: skewX(-15deg);
-}
-#productCarousel {
-  height: 100vh;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
 }
 
-.card .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--box-shadow-hover);
+.card-title {
+  font-size: 1rem; /* Smaller font size for the title */
+  margin-bottom: 0.25rem; /* Less space under the title */
 }
 
-#productCard {
-  background-color: aqua;
-  height: 400px;
+.card-text {
+  font-size: 0.875rem; /* Smaller font size for text */
+  margin-bottom: 0.5rem; /* Space above the price */
 }
 
+.btn {
+  background: #252a34;
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: #222; /* Darken button on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Ensure that the container for the product card has no additional padding or margins that might affect the layout */
 #productCardContainer {
-  background-color: black;
-  height: fit-content;
+  padding: 0;
+  margin: 0;
+  height: 100%; /* Ensure the container fills the card */
+  background-color: transparent; /* Optional: set the background color or make it transparent */
+}
+
+/* Additional styles to ensure responsiveness and layout */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width on smaller screens */
+    margin: 0.5rem 0; /* Adjust margin for stacked layout */
+  }
+}
+
+/* Optional hover effect for the card */
+.card:hover {
+  transform: translateY(-2px); /* Lift card slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px; /* Adjust right margin if necessary */
+  margin-left: -15px; /* Adjust left margin if necessary */
+}
+
+.card {
+  flex: 1; /* Flex 1 will allow the card to take up equal space */
+  margin: 3rem; /* Provide some spacing around cards */
+  display: flex; /* Enables flexbox for card contents */
+  flex-direction: column; /* Stacks card contents vertically */
+  align-items: center; /* Stretches items to fill the card width */
+  justify-content: center;
+}
+
+.card-img-top {
+  width: 100%; /* Image takes the full width of the card */
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the area */
+}
+
+.card-body {
+  padding: 0.5rem; /* Padding inside the card */
+  justify-content: center;
+}
+
+/* Ensure cards are of equal height */
+.card h-100 {
+  height: 100%; /* Forces the card to take the full height of the flex container */
+}
+
+/* Positioning the control buttons container */
+.carousel-controls-container {
+  top: 10px; /* Adjust this value to bring the buttons closer to the top */
+  right: 10px; /* Adjust this value to bring the buttons closer to the right */
+  z-index: 2; /* Ensures the buttons are above other content */
+  left: 1450px;
+}
+
+/* Creating custom arrows */
+.carousel-control-prev-icon:after,
+.carousel-control-next-icon:after {
+  content: ""; /* Necessary for pseudo-elements */
+  display: inline-block;
+  width: 1rem; /* Width of the arrow */
+  height: 1rem; /* Height of the arrow */
+  border: solid black; /* Color of the arrow */
+  border-width: 0 3px 3px 0; /* Makes a nice arrow shape */
+  padding: 3px;
+}
+
+.carousel-control-prev-icon:after {
+  transform: rotate(135deg); /* Rotate <- arrow to the correct orientation */
+  -webkit-transform: rotate(135deg);
+}
+
+.carousel-control-next-icon:after {
+  transform: rotate(-45deg); /* Rotate -> arrow to the correct orientation */
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Style adjustments for the buttons themselves */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 2rem; /* Adjust width as necessary */
+  height: 2rem; /* Adjust height as necessary */
+  background-color: #fff; /* Background color */
+  border-radius: 50%; /* Makes it circular */
+  border: 1px solid #ccc; /* Border color */
+  color: black; /* Color of the arrow */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* Removing default padding to bring buttons closer to the edge */
+.carousel-control-prev,
+.carousel-control-next {
+  padding: 0;
+}
+
+/* Ensuring buttons are visible and have space */
+.carousel-control-prev {
+  margin-right: 5px; /* Space between the buttons if needed */
+}
+
+.carousel-control-next {
+  margin-left: 5px; /* Space between the buttons if needed */
+}
+
+#FilterBtn .btn {
+  background-color: #eaeaea; /* Light grey background */
+  color: #252a34; /* Dark text color for contrast */
+  margin-right: 5px; /* Space between buttons */
+  border-color: #eaeaea; /* Border color to match the background */
+}
+
+#FilterBtn .btn-dark {
+  background-color: #eaeaea; /* Override Bootstrap's .btn-dark background color */
+  border-color: #eaeaea; /* Match the border color */
+}
+
+/* Buttons hover state */
+#FilterBtn .btn:hover,
+#FilterBtn .btn-dark:hover {
+  background-color: #252a34; /* Dark grey background on hover */
+  color: #eaeaea; /* Light text color for contrast on hover */
+}
+
+/* Remove the margin from the last button */
+#FilterBtn .btn:last-child {
+  margin-right: 0;
 }
