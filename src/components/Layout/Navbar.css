@@ -1,4 +1,7 @@
 /*NavBar*/
+nav{
+  background: #212529;
+}
 .NI {
     min-width: max-content;
   }
