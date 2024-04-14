@@ -1,4 +1,5 @@
 import "./ProductList.css";
+
 const productList = [
   {
     id: 1, // Unique identifier for the product
@@ -17,6 +18,25 @@ const productList = [
       "/src/images/71xDEv3pJL._AC_SL1500_.jpg",
       "/src/images/IMG_2805.jpg",
       "/src/images/925917713s.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
+      "/src/images/61bPLpDUtWL.jpg",
     ],
     sizes: ["S", "M", "L", "XL"], // For sportswear products
     flavors: ["Chocolate", "Vanilla"], // For supplement products
@@ -48,7 +68,7 @@ export function ProductList() {
   );
 
   // Chunk the images list into groups of 5 for the carousel slides
-  const chunkedImagesList = chunk(imagesList, 3); // Adjust the chunk size to 5 items per slide
+  const chunkedImagesList = chunk(imagesList, 5); // Adjust the chunk size to 5 items per slide
 
   return (
     <div
@@ -91,12 +111,10 @@ export function ProductList() {
         ))}
       </div>
 
-      <div className="carousel-controls-container position-absolute top-0 end-0 mt-2 me-2">
-        {" "}
-        {/* Position at the top right */}
+      <div className="carousel-controls-container position-absolute top-0 end-0 m-3">
         {/* Carousel control prev */}
         <button
-          className="carousel-control-prev me-1" // Add margin to separate the buttons
+          className="carousel-control-prev me-2" // Adjust spacing as needed
           type="button"
           data-bs-target="#productCarousel"
           data-bs-slide="prev"
@@ -107,6 +125,7 @@ export function ProductList() {
           ></span>
           <span className="visually-hidden">Previous</span>
         </button>
+
         {/* Carousel control next */}
         <button
           className="carousel-control-next"
@@ -121,9 +140,6 @@ export function ProductList() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-
-      {/* Indicators (Optional) */}
-      {/* ... */}
     </div>
   );
 }

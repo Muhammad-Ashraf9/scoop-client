@@ -50,8 +50,8 @@
 }
 
 .btn:hover {
-  background-color: #222; /* Darken button on hover */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+  background-color: #e1d1d1; /* Darken button on hover */
+  box-shadow: 0 2px 4px rgba(219, 206, 206, 0.2); /* Subtle shadow on hover */
 }
 
 /* Ensure that the container for the product card has no additional padding or margins that might affect the layout */
@@ -73,9 +73,10 @@
 /* Optional hover effect for the card */
 .card:hover {
   transform: translateY(-2px); /* Lift card slightly */
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
-row {
+.row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px; /* Adjust right margin if necessary */
@@ -107,63 +108,77 @@ row {
   height: 100%; /* Forces the card to take the full height of the flex container */
 }
 
-/* Positioning the control buttons container */
-.carousel-controls-container {
-  top: 10px; /* Adjust this value to bring the buttons closer to the top */
-  right: 10px; /* Adjust this value to bring the buttons closer to the right */
-  z-index: 2; /* Ensures the buttons are above other content */
-  left: 1450px;
+/* General styles for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%; /* Align vertically with the filter buttons */
+  transform: translateY(-50%); /* Center vertically */
+  background-color: black; /* No background color */
+  border: 2px; /* No border for a cleaner look */
+  width: auto; /* Only as wide as necessary */
+  height: auto; /* Only as tall as necessary */
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #252a34; /* Control color */
 }
 
-/* Creating custom arrows */
+/* Adjusting the size and position of the icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+
 .carousel-control-prev-icon:after,
 .carousel-control-next-icon:after {
   content: ""; /* Necessary for pseudo-elements */
   display: inline-block;
-  width: 1rem; /* Width of the arrow */
-  height: 1rem; /* Height of the arrow */
-  border: solid black; /* Color of the arrow */
-  border-width: 0 3px 3px 0; /* Makes a nice arrow shape */
-  padding: 3px;
+  width: 0.8rem; /* Adjust the size as needed */
+  height: 0.8rem; /* Adjust the size as needed */
+  border: 2px solid #080808; /* Arrow border color */
+  border-width: 0 2px 2px 0; /* Creates the arrow shape */
 }
 
 .carousel-control-prev-icon:after {
-  transform: rotate(135deg); /* Rotate <- arrow to the correct orientation */
-  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg); /* Left arrow */
+  margin-right: 10px; /* Space between arrows */
 }
 
 .carousel-control-next-icon:after {
-  transform: rotate(-45deg); /* Rotate -> arrow to the correct orientation */
-  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); /* Right arrow */
+  margin-left: 10px; /* Space between arrows */
 }
 
-/* Style adjustments for the buttons themselves */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 2rem; /* Adjust width as necessary */
-  height: 2rem; /* Adjust height as necessary */
-  background-color: #fff; /* Background color */
-  border-radius: 50%; /* Makes it circular */
-  border: 1px solid #ccc; /* Border color */
-  color: black; /* Color of the arrow */
-  align-items: center;
-  justify-content: center;
-  display: flex;
+/* Hover effects for the carousel controls */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #abb0bc; /* Slightly darker color on hover */
 }
 
-/* Removing default padding to bring buttons closer to the edge */
-.carousel-control-prev,
-.carousel-control-next {
-  padding: 0;
-}
-
-/* Ensuring buttons are visible and have space */
+/* Position the previous button to the left of the filter buttons */
 .carousel-control-prev {
-  margin-right: 5px; /* Space between the buttons if needed */
+  left: calc(
+    50% - 95px
+  ); /* Adjust this value based on your exact placement requirements */
 }
 
+/* Position the next button to the right of the filter buttons */
 .carousel-control-next {
-  margin-left: 5px; /* Space between the buttons if needed */
+  left: calc(
+    50% - 100px
+  ); /* Adjust this value based on your exact placement requirements */
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: auto;
+    transform: none;
+    position: static; /* Stack the arrows under the filter buttons on smaller screens */
+  }
 }
 
 #FilterBtn .btn {
