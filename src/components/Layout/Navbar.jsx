@@ -42,7 +42,7 @@ export function Navbar() {
     <>
       <SideCart handleClose={handleClose} show={show} />
       <nav
-        className="navbar navbar-expand-xl fixed-top bg-dark "
+        className="navbar navbar-expand-xl fixed-top "
         data-bs-theme="dark"
       >
         <div className="container-fluid">
