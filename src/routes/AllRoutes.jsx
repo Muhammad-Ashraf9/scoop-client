@@ -6,9 +6,10 @@ import {
 } from "react-router-dom";
 import { HomePage } from "../pages/Home";
 import { ProductList } from "../pages/Product";
-import { Checkout } from "../pages/checkouts/Checkout.jsx";
+import { Checkout } from "../pages/Checkouts/Checkout.jsx";
 import Login from "../pages/Login.jsx";
 import Cart from "../pages/Cart/Cart.jsx";
+import Wishlist from "../pages/Wishlist/Wishlist.jsx";
 import PageNotFound from "../pages/PageNotFound";
 
 export const AllRoutes = () => {
@@ -21,6 +22,7 @@ export const AllRoutes = () => {
           <Route path="products" element={<ProductList />} />
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route path="wishlist" element={<Wishlist />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="Admin" element={<Navigate to="/" />} />
         </Routes>

@@ -1,22 +1,19 @@
 import Table from 'react-bootstrap/Table'
-import PlusMinusInput from '../../components/PlusMinusInput'
-import './Cart.css'
+import './Wishlist.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import { Navbar } from '../../components'
 
 export default function Cart() {
     return (
         <>
         <Navbar />
-        <div className="container all">
+        {/* <div className="container all">
             <div className="row d-flex flex-wrap gx-5">
                 <div className="col-lg-8 col-sm-12">
                     <div className="row">
                         <div className="col">
-                            <Table className='text-center align-middle responsive-table bordered-row'>
+                            <Table className='text-center align-middle bordered-row'>
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -108,6 +105,58 @@ export default function Cart() {
                     </div>
                 </div>
             </div>
+        </div> */}
+        <div className='container all'>
+                <Table className='text-center align-middle table-hover table-striped'>
+                    <tbody>
+                        <tr>
+                            <td className='col-1'><a href="#" className='custom-a'><FontAwesomeIcon icon={faX} /></a></td>
+                            <td className='col-2'>
+                                <a href="#" >
+                                    <img src="https://www.nbs-supplements.com/wp-content/uploads/2024/03/d2d55f_d7317c8ee3804ab193a3a88cfa50da9emv2-copy.webp" width={"100px"} />
+                                </a>
+                            </td>
+                            <td className='col-6 text-start'>
+                                <p><a href="#" className='custom-a'>Casein pro BigMan</a></p>
+                                <p>1100 EGP</p>
+                                <p>March 13, 2023</p>
+                                </td>
+
+                            <td className='col-3'>
+                                <a href="#" className='btn btn-skew custom-btn-addToCart'><div className=' m-3'>Add to Cart</div></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className=''><a href="#" className='custom-a'><FontAwesomeIcon icon={faX} /></a></td>
+                            <td className=''>
+                                <a href="#" >
+                                    <img src="https://www.nbs-supplements.com/wp-content/uploads/2023/11/61q7oNwsmTL._AC_SY879_-675x1024.webp" width={"100px"} />
+                                </a>
+                            </td>
+                            <td className=' text-start'>
+                                <p><a href="#" className='custom-a'>glutamine 5000mg core champs</a></p>
+                                <p>2100 EGP</p>
+                                <p>March 13, 2023</p>
+                            </td>
+
+                            <td className=''>
+                                <div className=' bg-light p-4 border border-2'>Out of Stock</div>
+                            </td>
+                        </tr>
+                        {/* <tr>
+                            <td><a href="#" className='custom-a'><FontAwesomeIcon icon={faX} /></a></td>
+                            <td data-label="View">
+                                <a href="#">
+                                    <img src="https://www.nbs-supplements.com/wp-content/uploads/2023/11/61q7oNwsmTL._AC_SY879_-675x1024.webp" width={"100px"} />
+                                </a>
+                            </td>
+                            <td data-label="Product"><a href="#" className='custom-a'>glutamine 5000mg core champs</a></td>
+                            <td data-label="Price">1200 EGP</td>
+                            <td data-label="Quantity"><PlusMinusInput /></td>
+                            <td data-label="Subtotal">1200 EGP</td>
+                        </tr> */}
+                    </tbody>
+                </Table>
         </div>
         </>
     )

@@ -166,7 +166,7 @@ export function Navbar() {
               SIGN IN
             </NavLink>
 
-            <a href="#" className="mx-3">
+            <a href="/wishlist" className="mx-3">
               {" "}
               <FontAwesomeIcon icon={faHeart} />
             </a>
