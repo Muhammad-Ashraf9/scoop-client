@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { HomePage } from "../pages/Home";
 import { ProductList } from "../pages/Product";
-import { Checkout } from "../pages/checkouts/Checkout.jsx";
+import { Checkout } from "../pages/Checkouts/Checkout.jsx";
 import Login from "../pages/Login.jsx";
 import Cart from "../pages/Cart/Cart.jsx";
 import PageNotFound from "../pages/PageNotFound";
