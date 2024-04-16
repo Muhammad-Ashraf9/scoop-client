@@ -1,0 +1,87 @@
+
+/* checkout */
+#all{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #4c4c4c;
+  color: #da0037;
+}
+#checkoutForm{
+  margin-top: 110px;
+  
+}
+  .Content label{
+    color: #b00026;
+  }
+  .Shipping{
+    background-color: white ;
+  }
+  #placing{
+    margin-top: 20px;
+    background-color:#da0037 ;
+    color: white;
+    font-size: larger;
+  }
+  #placing:hover{
+    background-color: white ;
+    color: #da0037;
+  }
+  .total{
+    color: #da0037;
+  }
+  .empty{
+  background-color:#4c4c4c ;
+  }
+  
+  .bgPaige{
+    background-color: white;
+  }
+  #placeOrder{
+    position: sticky;
+    top: 6rem;
+  }
+  .title{
+    color: black;
+    font-weight: bold;
+  }
+  .exp span{
+    color: #da0037;
+    margin-right: 15px;
+  }
+  @media screen and (max-width: 1200px) {
+    #checkoutForm{
+      margin-top: 140px;
+    }
+  }
+  @media screen and (max-width: 639px) {
+    #checkoutForm{
+      margin-top: 100px;
+    }
+  }
+  /* .CheckoutPayment li{
+    list-style: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #b00026;
+  }
+  .CheckoutPayment li:last-child{
+    border-bottom: none;
+  }
+  .CheckoutPayment li label{
+    color: #da0037;
+  }
+  .CheckoutPayment li input[type="radio"]{
+    border: none;
+    background-color: white;
+    accent-color: #da0037;
+    margin-right: 10px;
+  }
+  .PaymentBox{
+    color: rgb(89, 88, 88)  ;
+    font-size: 14px;
+    margin-top: 5px;
+    /* display: none; 
+  } 
+  */
+  

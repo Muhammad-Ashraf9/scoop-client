@@ -5,9 +5,11 @@ import {
   Routes,
 } from "react-router-dom";
 import { HomePage } from "../pages/Home";
+import { ProductList } from "../pages/Product";
+import { Checkout } from "../pages/checkouts/Checkout.jsx";
 import Login from "../pages/Login.jsx";
+import Cart from "../pages/Cart/Cart.jsx";
 import PageNotFound from "../pages/PageNotFound";
-import { ProductListFilters } from "../pages/Product/ProductList.jsx";
 
 export const AllRoutes = () => {
   return (
@@ -16,8 +18,9 @@ export const AllRoutes = () => {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="login" element={<Login />} />
-          ProductListFilters
-          <Route path="products" element={<ProductListFilters />} />
+          <Route path="products" element={<ProductList />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="checkout" element={<Checkout />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="Admin" element={<Navigate to="/" />} />
         </Routes>

@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <>
       <footer>
-        <div className="footer-top ps-0 ">
+        <div className="footer-top ps-5 ">
           <div className="container-fluid">
             <div className="row">
               <div id="about" className="col-md-3 footer-about ">

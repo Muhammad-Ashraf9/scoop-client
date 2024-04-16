@@ -7,10 +7,14 @@ import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import SideCart from "../sideCart";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,6 +40,7 @@ export function Navbar() {
   };
   return (
     <>
+      <SideCart handleClose={handleClose} show={show} />
       <nav
         className="navbar navbar-expand-xl fixed-top bg-dark "
         data-bs-theme="dark"
@@ -114,17 +119,17 @@ export function Navbar() {
                   >
                     <li>
                       <a className="dropdown-item mx-0 d-item" href="#">
-                        Bra
+                        Shirts
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item d-item" href="#">
-                        Panty
+                        Pants
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item d-item" href="#">
-                        kalson
+                        T-Shirts
                       </a>
                     </li>
                   </ul>
@@ -165,7 +170,7 @@ export function Navbar() {
               {" "}
               <FontAwesomeIcon icon={faHeart} />
             </a>
-            <a href="#">
+            <a href="#" onClick={handleShow}>
               <FontAwesomeIcon icon={faBagShopping} />
             </a>
           </div>
