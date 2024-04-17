@@ -4,13 +4,15 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { HomePage } from "../pages/Home";
-import { ProductList } from "../pages/Product";
-import { Checkout } from "../pages/Checkouts/Checkout.jsx";
-import Login from "../pages/Login.jsx";
-import Cart from "../pages/Cart/Cart.jsx";
-import Wishlist from "../pages/Wishlist/Wishlist.jsx";
-import PageNotFound from "../pages/PageNotFound";
+import { HomePage } from "../Pages/Home/HomePage.jsx";
+import { ProductList } from "../Pages/Product/ProductList.jsx";
+import { Checkout } from "../Pages/Checkouts/Checkout.jsx";
+import Login from "../Pages/Login.jsx";
+import Cart from "../Pages/Cart/Cart.jsx";
+import Wishlist from "../Pages/Wishlist/Wishlist.jsx";
+import ContactUs from "../Pages/Contact us/Contact-us.jsx";
+import PageNotFound from "../Pages/PageNotFound";
+
 
 export const AllRoutes = () => {
   return (
@@ -23,6 +25,7 @@ export const AllRoutes = () => {
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="wishlist" element={<Wishlist />} />
+          <Route path="contact-us" element={<ContactUs />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="Admin" element={<Navigate to="/" />} />
         </Routes>
