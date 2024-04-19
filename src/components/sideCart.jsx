@@ -39,7 +39,6 @@ export default function SideCart({ show, handleClose }) {
                         <div className='flex-row ps-3 pe-3'>
                             <a href='/cart' style={viewCartStyle} className='col-12 mt-2 rounded-0 btn btn-skew'>VIEW CART</a>
                             <a href='#' style={checkoutStyle} className='col-12 mt-3 rounded-0 btn btn-skew'>CHECKOUT</a>
-                            
                         </div>
                     </div>
                 </Offcanvas.Body>
