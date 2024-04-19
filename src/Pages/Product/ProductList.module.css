@@ -1,0 +1,178 @@
+.card {
+  height: auto; /* Let the height adjust to content */
+  box-sizing: border-box;
+  margin: 1rem; /* Space around the cards */
+  display: flex;
+  flex-direction: column; /* Stack the card content vertically */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #eaeaea; /* Card background color */
+  color: #252a34;
+  border-radius: 8px; /* Rounded corners for the card */
+  flex: none; /* Do not grow or shrink */
+  width: 200px;
+  overflow: hidden;
+}
+
+.cardTop {
+  width: 100%; /* Image takes the full width of the card */
+  height: auto; /* Height is auto to maintain the aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area */
+  border-top-left-radius: 8px; /* Rounded top corners */
+  border-top-right-radius: 8px;
+}
+
+.cardBody {
+  padding: 1rem; /* Spacing inside the card */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+}
+
+.cardTitle {
+  font-size: 1rem; /* Smaller font size for the title */
+  margin-bottom: 0.25rem; /* Less space under the title */
+}
+
+.cardText {
+  font-size: 0.875rem; /* Smaller font size for text */
+  margin-bottom: 0.5rem; /* Space above the price */
+}
+.btnProduct {
+  background: #252a34;
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.btnSide {
+  background: #ece3e3;
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.btnMain {
+  background: #252a34;
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.btnSide:hover {
+  background-color: #252a34; /* Darken button on hover */
+  box-shadow: 0 2px 4px rgba(219, 206, 206, 0.2); /* Subtle shadow on hover */
+}
+
+#productCardContainer {
+  padding: 0;
+  margin: 0;
+  height: 100%; /* Ensure the container fills the card */
+  background-color: transparent; /* Optional: set the background color or make it transparent */
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 10vw; /* Subtracting total horizontal margin */
+    margin: 1rem; /* Horizontal margin on each side */
+    display: inline-flex; /* Changed from inline to inline-block for better control */
+    vertical-align: top; /* Aligns cards to the top to prevent vertical space */
+  }
+}
+
+.card:hover {
+  transform: translateY(-2px); /* Lift card slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.card h-100 {
+  height: 100%; /* Forces the card to take the full height of the flex container */
+}
+
+.carouselControlPrev,
+.carouselControlNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  width: 40px; /* You can adjust the width as needed */
+  height: 40px; /* You can adjust the height as needed */
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #19191a; /* This is the color of the arrow */
+  font-size: 40px; /* Adjust the size of the icon */
+  cursor: pointer;
+  user-select: none;
+}
+
+.carouselControlPrev::before,
+.carouselControlNext::before {
+  content: "";
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-140deg);
+  vertical-align: middle;
+}
+
+.carouselControlNext::before {
+  transform: rotate(45deg);
+}
+
+.carouselControlPrev:hover,
+.carouselControlNext:hover {
+  color: #abb0bc; /* Lighter color on hover */
+}
+
+/* Position the previous button to the left */
+.carouselControlPrev {
+  left: -70px; /* Distance from the left, adjust as needed */
+}
+
+/* Position the next button to the right */
+.carouselControlNext {
+  right: 10px; /* Distance from the right, adjust as needed */
+}
+
+@media (max-width: 768px) {
+  .carouselControlPrev,
+  .carouselControlNext {
+    width: 10vw;
+  }
+}
+
+#FilterBtn .btn {
+  background-color: #eaeaea; /* Light grey background */
+  color: #252a34; /* Dark text color for contrast */
+  margin-right: 5px; /* Space between buttons */
+  border-color: #eaeaea;
+}
+
+#FilterBtn .btn-dark {
+  background-color: #eaeaea; /* Override Bootstrap's .btn-dark background color */
+  border-color: #eaeaea; /* Match the border color */
+}
+
+#FilterBtn .btn:hover,
+#FilterBtn .btn-dark:hover {
+  background-color: #252a34;
+  color: #eaeaea;
+}
+
+#FilterBtn .btn:last-child {
+  margin-right: 0;
+}
