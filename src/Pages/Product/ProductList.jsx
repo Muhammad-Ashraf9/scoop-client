@@ -1,7 +1,13 @@
 import s from "./ProductList.module.css";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-const productList = [
+//testing Redux 
+import { useFilter } from '../../context/FilterContext';
+import { getProducts } from '../../services/productService';
+
+
+
+const productListHissen = [
   {
     id: 1, // Unique identifier for the product
     title: "Product Name",
@@ -48,8 +54,27 @@ function chunk(array, size) {
 }
 
 export function ProductList() {
+  //test redux
+
+  const { productList, FetchProducts } = useFilter()
+  const[error,setError] = useState('')
+  const fetchProducts = useCallback(async () => {
+    try {
+      const response = await getProducts("searchParamWord");
+      FetchProducts(response.data)
+    }
+    catch (err) {
+      setError("Sorry, Server Error! Failed To Load Data")
+    }
+  }, [])
+
+  useEffect(() => {
+    fetchProducts()
+  }, [fetchProducts])
+  
+
   // Flatten the list of products into a list of images, preserving the product data
-  const imagesList = productList.flatMap((product) =>
+  const imagesList = productListHissen.flatMap((product) =>
     product.images.map((image) => ({
       ...product,
       image, // add image as a property
