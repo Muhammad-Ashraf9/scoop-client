@@ -83,11 +83,13 @@
 
 @media (max-width: 768px) {
   .card {
-    width: 100%; /* Full width on smaller screens */
-    margin: 0.5rem 0; /* Adjust margin for stacked layout */
-    overflow: hidden;
+    width: 10vw; /* Subtracting total horizontal margin */
+    margin: 1rem; /* Horizontal margin on each side */
+    display: inline-flex; /* Changed from inline to inline-block for better control */
+    vertical-align: top; /* Aligns cards to the top to prevent vertical space */
   }
 }
+
 .card:hover {
   transform: translateY(-2px); /* Lift card slightly */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
@@ -102,63 +104,57 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: black;
-  border: 2px;
-  width: auto;
-  height: auto;
+  background-color: transparent;
+  border: none;
+  width: 40px; /* You can adjust the width as needed */
+  height: 40px; /* You can adjust the height as needed */
   padding: 0;
   align-items: center;
   justify-content: center;
   display: flex;
-  color: #252a34;
+  color: #19191a; /* This is the color of the arrow */
+  font-size: 40px; /* Adjust the size of the icon */
+  cursor: pointer;
+  user-select: none;
 }
 
-.carouselControlPrevicon:after,
-.carouselcontrolnexticon:after {
+.carouselControlPrev::before,
+.carouselControlNext::before {
   content: "";
+  border-style: solid;
+  border-width: 2px 2px 0 0;
   display: inline-block;
-  width: 0.8rem;
-  height: 0.8rem;
-  border: 2px solid #080808;
-  border-width: 0 2px 2px 0;
-}
-.carouselcontrolprevicon,
-.carouselcontrolnexticon {
-  background-image: none;
-}
-.carouselcontrolprevicon:after {
-  transform: rotate(135deg);
-  margin-right: 10px;
+  padding: 3px;
+  transform: rotate(-140deg);
+  vertical-align: middle;
 }
 
-.carouselcontrolnexticon:after {
-  transform: rotate(-45deg);
-  margin-left: 10px;
+.carouselControlNext::before {
+  transform: rotate(45deg);
 }
 
-.carouselcontrolprev:hover,
-.carouselcontrolnext:hover {
-  color: #abb0bc;
+.carouselControlPrev:hover,
+.carouselControlNext:hover {
+  color: #abb0bc; /* Lighter color on hover */
 }
 
-/* Position the previous button to the left of the filter buttons */
-.carouselcontrolprev {
-  left: calc(50% - 95px);
+/* Position the previous button to the left */
+.carouselControlPrev {
+  left: -70px; /* Distance from the left, adjust as needed */
 }
 
-/* Position the next button to the right of the filter buttons */
-.carouselcontrolnext {
-  left: calc(50% - 100px);
+/* Position the next button to the right */
+.carouselControlNext {
+  right: 10px; /* Distance from the right, adjust as needed */
 }
 
 @media (max-width: 768px) {
-  .carouselcontrolprev,
-  .carouselcontrolnext {
-    top: auto;
-    transform: none;
-    position: static;
+  .carouselControlPrev,
+  .carouselControlNext {
+    width: 10vw;
   }
 }
+
 #FilterBtn .btn {
   background-color: #eaeaea; /* Light grey background */
   color: #252a34; /* Dark text color for contrast */

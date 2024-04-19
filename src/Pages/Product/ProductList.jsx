@@ -1,4 +1,5 @@
 import s from "./ProductList.module.css";
+import { useState } from "react";
 
 const productList = [
   {
@@ -146,9 +147,7 @@ export function ProductListFilters() {
 
             {/* Buttons on the right */}
             <div id="FilterBtn">
-              <button className={s.btnSide}>Sale</button>
-              <button className={s.btnMain}>New Arrivals</button>
-              <button className={s.btnSide}>Latest</button>
+              <FilterButtons />
             </div>
           </div>
         </div>
@@ -161,3 +160,42 @@ export function ProductListFilters() {
     </div>
   );
 }
+//buttons//
+
+export const FilterButtons = () => {
+  // State to track the active button
+  const [activeButton, setActiveButton] = useState("New Arrivals");
+
+  // Function to handle button click
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
+
+  // Function to get the button class
+  const getButtonClass = (buttonName) => {
+    return buttonName === activeButton ? s.btnMain : s.btnSide;
+  };
+
+  return (
+    <div id="FilterBtn">
+      <button
+        className={getButtonClass("Sale")}
+        onClick={() => handleButtonClick("Sale")}
+      >
+        Sale
+      </button>
+      <button
+        className={getButtonClass("New Arrivals")}
+        onClick={() => handleButtonClick("New Arrivals")}
+      >
+        New Arrivals
+      </button>
+      <button
+        className={getButtonClass("Latest")}
+        onClick={() => handleButtonClick("Latest")}
+      >
+        Latest
+      </button>
+    </div>
+  );
+};
