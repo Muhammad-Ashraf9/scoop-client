@@ -6,7 +6,7 @@ function BasicExample() {
         <Card className='rounded-0 border-0'>
             <div className='row g-0'>
                 <div className='col-3'>
-                    <Card.Img src="./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif" className=' img-fluid p-3' />
+                    <Card.Img src="./03149df0-ef7d-44b1-b256-8853ef0e5190.jpg" className=' img-fluid p-3' />
                 </div>
                 <div className='col-8'>
                     <Card.Body className=' bg-white ps-0'>

@@ -11,6 +11,7 @@ import Login from "../Pages/Login.jsx";
 import Cart from "../Pages/Cart/Cart.jsx";
 import Wishlist from "../Pages/Wishlist/Wishlist.jsx";
 import ContactUs from "../Pages/Contact us/Contact-us.jsx";
+import Admin from "../Pages/Admin/Admin.jsx"
 import PageNotFound from "../Pages/PageNotFound";
 
 export const AllRoutes = () => {
@@ -25,6 +26,7 @@ export const AllRoutes = () => {
           <Route path="checkout" element={<Checkout />} />
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="admin" element={<Admin />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="Admin" element={<Navigate to="/" />} />
         </Routes>

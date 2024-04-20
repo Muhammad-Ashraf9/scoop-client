@@ -1,0 +1,51 @@
+.navbar {
+    background-color: #212529;
+}
+
+.styledLink{
+    color: white;
+    font-weight: bold;
+}
+
+.styledLink:hover{
+    color: #DA0037;
+    text-decoration: none;
+}
+
+
+/* .styledLink:focus::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #DA0037;
+    left: 0;
+    bottom: -10px;
+} */
+
+.test:focus{
+    color: white;
+}
+
+.logoText{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.coop{
+    font-size: x-large;
+    
+}
+
+.supplements{
+    font-size:medium;
+}
+
+.circleImage {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    object-fit: cover;
+    margin-right: 0.75rem;
+}
