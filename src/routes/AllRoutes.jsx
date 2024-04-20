@@ -4,15 +4,15 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { HomePage } from "../Pages/Home/HomePage.jsx";
-import { ProductListFilters } from "../Pages/Product/ProductList.jsx";
-import { Checkout } from "../Pages/Checkouts/Checkout.jsx";
-import Login from "../Pages/Login.jsx";
-import Cart from "../Pages/Cart/Cart.jsx";
-import Wishlist from "../Pages/Wishlist/Wishlist.jsx";
-import ContactUs from "../Pages/Contact us/Contact-us.jsx";
-import Admin from "../Pages/Admin/Admin.jsx"
-import PageNotFound from "../Pages/PageNotFound";
+import { HomePage } from "../pages/Home/HomePage.jsx";
+import { ProductListFilters } from "../pages/Product/ProductList.jsx";
+import { Checkout } from "../pages/checkouts/Checkout.jsx";
+import Login from "../pages/Login.jsx";
+import Cart from "../pages/Cart/Cart.jsx";
+import Wishlist from "../pages/Wishlist/Wishlist.jsx";
+import ContactUs from "../pages/Contact us/Contact-us.jsx";
+import Admin from "../pages/Admin/Admin.jsx"
+import PageNotFound from "../pages/PageNotFound";
 
 export const AllRoutes = () => {
   return (
