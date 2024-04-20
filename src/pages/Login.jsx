@@ -38,7 +38,7 @@ export default function Login() {
       <Row className="justify-content-center mx-auto mt-5 align-items-center w-75 shadow-lg p-5">
         <div className="d-none d-md-block col-md-7 col-lg-6 form-image-container">
           <img
-            src="https://via.placeholder.com/1080X720"
+            src="https://img.freepik.com/free-photo/sportsman-standing-white-wall-holding-vitamins_171337-15339.jpg?w=996&t=st=1713514981~exp=1713515581~hmac=b88e3532cc20bb550695dfa0bd4041c72b0726b660dafa5290ca30c92b93e930"
             alt="Login"
             className="img-fluid form-image"
           />
