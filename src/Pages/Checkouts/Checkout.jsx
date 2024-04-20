@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Navbar } from "../../components/Layout/Navbar.jsx";
 import "./Checkout.css";
@@ -7,29 +7,30 @@ import { faHourglassEnd } from "@fortawesome/free-solid-svg-icons";
 import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { faShieldHeart } from "@fortawesome/free-solid-svg-icons";
 import { faScroll } from "@fortawesome/free-solid-svg-icons";
-var cartItems=[
+var cartItems = [
   {
     _id: 1, // Unique identifier for the product
     name: "Rainbow Six Siege shirt", // Name of the product
-    description: "a very good shirt that you can wear every where and everyday any thing i don't know what else to say but i will keep on writing.",
+    description:
+      "a very good shirt that you can wear every where and everyday any thing i don't know what else to say but i will keep on writing.",
     category: "Sportswear", // Or "Sportswear ,Supplements"
     subcategory: "Shirts", // Or "Shirts", "Shorts", "Protein" etc.
     price: 400000,
     //discountedPrice: 24.99, // Optional, for sales or promotions
     images: [
-    "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,flatlay,101010:01c5ca27c6,front,wide_portrait,750x1000.webp",
-    "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,two_models,101010:01c5ca27c6,front,tall_portrait,750x1000.1.webp"
+      "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,flatlay,101010:01c5ca27c6,front,wide_portrait,750x1000.webp",
+      "https://ih1.redbubble.net/image.5027671498.5011/ssrco,classic_tee,two_models,101010:01c5ca27c6,front,tall_portrait,750x1000.1.webp",
     ],
     size: ["S"], // For sportswear products
     //flavors: ["Chocolate", "Vanilla"], // For supplement products
     inventory: 100,
     //tags: ["Whey", "Protein Powder", "Muscle Building"],
-   // averageRating: 4.2, // Computed from reviews
+    // averageRating: 4.2, // Computed from reviews
     //numReviews: 25,
     //totalSales: 1000, // property to track total sales
     //createdAt: ("2023-04-01T10:30:00Z"), //ISODate,
     //updatedAt: ("2023-04-05T15:45:00Z")  //ISODate
-    },
+  },
   {
     _id: 2, // Unique identifier for the product
     name: "Protien Powder", // Name of the product
@@ -38,20 +39,19 @@ var cartItems=[
     subcategory: "Protein", // Or "Shirts", "Shorts", "Protein" etc.
     price: 1500,
     images: [
-    "https://www.nbs-supplements.com/wp-content/uploads/2024/04/Stenabolic_front-copy.webp",
-    "https://www.nbs-supplements.com/wp-content/uploads/2024/04/Stenabolic_front-copy.webp"
+      "https://www.nbs-supplements.com/wp-content/uploads/2024/04/Stenabolic_front-copy.webp",
+      "https://www.nbs-supplements.com/wp-content/uploads/2024/04/Stenabolic_front-copy.webp",
     ],
-   // sizes: ["S", "M", "L", "XL"], // For sportswear products
+    // sizes: ["S", "M", "L", "XL"], // For sportswear products
     flavor: "Chocolate", // For supplement products
     inventory: 100,
-   // tags: ["Whey", "Protein Powder", "Muscle Building"],
-   // averageRating: 4.2, // Computed from reviews
+    // tags: ["Whey", "Protein Powder", "Muscle Building"],
+    // averageRating: 4.2, // Computed from reviews
     //numReviews: 25,
     //totalSales: 1000, // property to track total sales
     //createdAt: ("2023-04-01T10:30:00Z"), //ISODate,
     //updatedAt: ("2023-04-05T15:45:00Z")  //ISODate
-    },
-    
+  },
 ];
 export function Checkout() {
   const [validated, setValidated] = useState(false);
@@ -68,20 +68,23 @@ export function Checkout() {
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="Content">
         <div id="all">
           <div id="content" className="container ">
             <div className="row ">
               <Form
                 id="checkoutForm"
-                validated={validated} onSubmit={handleSubmit}
+                validated={validated}
+                onSubmit={handleSubmit}
                 className="row g-3 "
-                noValidate 
+                noValidate
               >
                 <div className="col-lg-8 col-md-12">
                   <div className="rounded-4 p-4 row g-3 bgPaige">
-                    <span className="fs-2 text-black">Personal information:</span>
+                    <span className="fs-2 text-black">
+                      Personal information:
+                    </span>
                     <div className="col-md-6 ">
                       <label htmlFor="FirstName" className="form-label">
                         First name
@@ -188,8 +191,8 @@ export function Checkout() {
                       </div>
                     </div>
                     <div className="col-md-4">
-                    <label htmlFor="Governerate" className="form-label">
-                    Governerate
+                      <label htmlFor="Governerate" className="form-label">
+                        Governerate
                       </label>
                       <input
                         name="Governerate"
@@ -222,7 +225,7 @@ export function Checkout() {
                       </div>
                     </div>
                     <div className="col-md-4">
-                    <label
+                      <label
                         htmlFor="Payment"
                         name="Payment"
                         className="form-label"
@@ -230,10 +233,12 @@ export function Checkout() {
                         Way OF Payment
                       </label>
                       <select className="form-select" id="Payment" required>
-                        <option selected value="COD">Cash on delivery</option>
+                        <option selected value="COD">
+                          Cash on delivery
+                        </option>
                         <option value="Credit">Credit</option>
                         <option value="MW">Mobile Wallet</option>
-                        </select>
+                      </select>
                       <div className="invalid-feedback">
                         Please enter a a way of payment.
                       </div>
@@ -244,69 +249,90 @@ export function Checkout() {
                   <div className="rounded-4 p-4 row g-2 my-3 Shipping">
                     <span className="fs-4">Order Details</span>
                     <div id="items" className=" p-3 d-flex flex-column gap-3">
-                      {cartItems.map(item => {
-                        return (<>
-                        <div id={item._id} className="card lg-auto">
-                        <div className="row g-0">
-                          <div className="col-lg-2 my-auto">
-                            <img
-                              src={item.images[1]}
-                              className="w-100 rounded mt-0"
-                              alt={item.name}
-                            />
-                          </div>
-                          <div className="col-lg-10 ">
-                            <div className="card-body bg-white d-flex gap-3 flex-nowrap">
-                              {/* <!-- Information --> */}
-                              <div className="col-sm-7 flex-grow-1">
-                                <h5 className="card-title">{item.name}</h5>
-                                <p className="card-text mb-2">{item.description}</p>
-                                {item.size!=null ? <p className="card-text my-0">
-                                  Size : {" "}
-                                  <small className="text-body-secondary">
-                                    {item.size}
-                                  </small>
-                                </p> : ""}
-                                {item.flavor!=null ? <p className="card-text my-0">
-                                  Flavor : {" "}
-                                  <small className="text-body-secondary">
-                                    {item.flavor}
-                                  </small>
-                                </p> : ""}
-                                <p className="card-text my-0">
-                                  <small className="text-body-secondary">
-                                    only {item.inventory} left in
-                                    the stock
-                                  </small>
-                                </p>
-                                <p className="card-text my-0">
-                                Category : 
-                                  <small className="text-body-secondary ms-1">
-                                    {item.category} - {item.subcategory}
-                                  </small>
-                                </p>                              </div>
-                              {/*<!-- End of information -->
+                      {cartItems.map((item) => {
+                        return (
+                          <>
+                            <div id={item._id} className="card lg-auto">
+                              <div className="row g-0">
+                                <div className="col-lg-2 my-auto">
+                                  <img
+                                    src={item.images[1]}
+                                    className="w-100 rounded mt-0"
+                                    alt={item.name}
+                                  />
+                                </div>
+                                <div className="col-lg-10 ">
+                                  <div className="card-body bg-white d-flex gap-3 flex-nowrap">
+                                    {/* <!-- Information --> */}
+                                    <div className="col-sm-7 flex-grow-1">
+                                      <h5 className="card-title">
+                                        {item.name}
+                                      </h5>
+                                      <p className="card-text mb-2">
+                                        {item.description}
+                                      </p>
+                                      {item.size != null ? (
+                                        <p className="card-text my-0">
+                                          Size :{" "}
+                                          <small className="text-body-secondary">
+                                            {item.size}
+                                          </small>
+                                        </p>
+                                      ) : (
+                                        ""
+                                      )}
+                                      {item.flavor != null ? (
+                                        <p className="card-text my-0">
+                                          Flavor :{" "}
+                                          <small className="text-body-secondary">
+                                            {item.flavor}
+                                          </small>
+                                        </p>
+                                      ) : (
+                                        ""
+                                      )}
+                                      <p className="card-text my-0">
+                                        <small className="text-body-secondary">
+                                          only {item.inventory} left in the
+                                          stock
+                                        </small>
+                                      </p>
+                                      <p className="card-text my-0">
+                                        Category :
+                                        <small className="text-body-secondary ms-1">
+                                          {item.category} - {item.subcategory}
+                                        </small>
+                                      </p>{" "}
+                                    </div>
+                                    {/*<!-- End of information -->
                               <!-- Controls --> */}
-                              <div className="col-5 pt-4 text-center">
-                                <a
-                                  id="close"
-                                  className="float-end   border-0 btn-close rounded-circle">                                  
-                                </a>
-                                <h3 className="price mt-2 mb-3">{item.price}.LE</h3>
-                                <div className="d-flex justify-content-center px-lg-0 px-md-5 ">
-                                  <p className="btn btn-dark fw-bold fs-6">+</p>
-                                  <div className="px-2 fs-4 ">20</div>
-                                  <p className="btn btn-danger fw-bold fs-6 ">-</p>
+                                    <div className="col-5 pt-4 text-center">
+                                      <a
+                                        id="close"
+                                        className="float-end   border-0 btn-close rounded-circle"
+                                      ></a>
+                                      <h3 className="price mt-2 mb-3">
+                                        {item.price}.LE
+                                      </h3>
+                                      <div className="d-flex justify-content-center px-lg-0 px-md-5 ">
+                                        <p className="btn btn-dark fw-bold fs-6">
+                                          +
+                                        </p>
+                                        <div className="px-2 fs-4 ">20</div>
+                                        <p className="btn btn-danger fw-bold fs-6 ">
+                                          -
+                                        </p>
+                                      </div>
+                                    </div>
+                                    {/* <!-- End of controls --> */}
+                                  </div>
+                                  {/* <!-- End of Control and information --> */}
                                 </div>
                               </div>
-                              {/* <!-- End of controls --> */}
                             </div>
-                            {/* <!-- End of Control and information --> */}
-                          </div>
-                        </div>
-                      </div>
-                      </>
-                          )})}
+                          </>
+                        );
+                      })}
 
                       {/* items */}
                     </div>
@@ -318,23 +344,23 @@ export function Checkout() {
                     className=" rounded-4 text-dark  p-4 mb-3 bgPaige "
                   >
                     <div className="fs-5">
-                     <p className="fs-1 title ">Order Summary</p>
-                    <div className="d-flex justify-content-between ">
-                      <span id="numOfItems">Number of Items</span>
-                      <span id="SubTotal">15</span>
-                    </div>
-                    <div className="d-flex justify-content-between ">
-                      <span>Shipping and handling</span>
-                      <span id="Shipping">25</span>
-                    </div>
-                    <div className="d-flex justify-content-between ">
-                      <span>Before Tax</span>
-                      <span id="beforeTax">56</span>
-                    </div>
-                    <div className="d-flex justify-content-between ">
-                      <span>Tax Collected</span>
-                      <span id="Tax">56</span>
-                    </div>
+                      <p className="fs-1 title ">Order Summary</p>
+                      <div className="d-flex justify-content-between ">
+                        <span id="numOfItems">Number of Items</span>
+                        <span id="SubTotal">15</span>
+                      </div>
+                      <div className="d-flex justify-content-between ">
+                        <span>Shipping and handling</span>
+                        <span id="Shipping">25</span>
+                      </div>
+                      <div className="d-flex justify-content-between ">
+                        <span>Before Tax</span>
+                        <span id="beforeTax">56</span>
+                      </div>
+                      <div className="d-flex justify-content-between ">
+                        <span>Tax Collected</span>
+                        <span id="Tax">56</span>
+                      </div>
                     </div>
                     <hr />
                     <div className="d-flex justify-content-between total ">
@@ -344,13 +370,37 @@ export function Checkout() {
                     <hr className="my-1" />
                     <p className="mb-2 fs-5 title">The Scoop experience</p>
                     <div className="exp ps-2">
-                        <p><span><FontAwesomeIcon icon={faHourglassEnd}/></span>14 Days guarantee</p>
-                        <p><span><FontAwesomeIcon icon={faTruckFast} /></span>Free Shipping</p>
-                        <p><span><FontAwesomeIcon icon={faShieldHeart} /></span>100% Secure Payment</p>
-                        <p><span><FontAwesomeIcon icon={faScroll} /></span>Free useage guideline </p>
+                      <p>
+                        <span>
+                          <FontAwesomeIcon icon={faHourglassEnd} />
+                        </span>
+                        14 Days guarantee
+                      </p>
+                      <p>
+                        <span>
+                          <FontAwesomeIcon icon={faTruckFast} />
+                        </span>
+                        Free Shipping
+                      </p>
+                      <p>
+                        <span>
+                          <FontAwesomeIcon icon={faShieldHeart} />
+                        </span>
+                        100% Secure Payment
+                      </p>
+                      <p>
+                        <span>
+                          <FontAwesomeIcon icon={faScroll} />
+                        </span>
+                        Free useage guideline{" "}
+                      </p>
                     </div>
-                    
-                    <button  type="submit" id="placing" className="btn w-100 mt-0">
+
+                    <button
+                      type="submit"
+                      id="placing"
+                      className="btn w-100 mt-0"
+                    >
                       Place Order
                     </button>
                     <p className="pt-3">
@@ -359,7 +409,6 @@ export function Checkout() {
                       <strong>Conditions of use.</strong>
                     </p>
                     <hr />
-                   
                   </div>
                 </div>
               </Form>

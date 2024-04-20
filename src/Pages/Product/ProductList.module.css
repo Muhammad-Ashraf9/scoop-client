@@ -83,10 +83,8 @@
 
 @media (max-width: 768px) {
   .card {
-    width: 10vw; /* Subtracting total horizontal margin */
-    margin: 1rem; /* Horizontal margin on each side */
-    display: inline-flex; /* Changed from inline to inline-block for better control */
-    vertical-align: top; /* Aligns cards to the top to prevent vertical space */
+    justify-content: center;
+    display: flex;
   }
 }
 
