@@ -1,5 +1,5 @@
 import s from "./ProductList.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const productList = [
   {
@@ -57,7 +57,17 @@ export function ProductList() {
   );
 
   // Chunk the images list into groups of 5 for the carousel slides
-  const chunkedImagesList = chunk(imagesList, 5); // Adjust the chunk size to 5 items per slide
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const handleResize = () => {
+    setIsLargeScreen(window.innerWidth >= 992);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+  const chunkedImagesList = chunk(imagesList, isLargeScreen ? 5 : 1); // Adjust the chunk size to 5 items per slide
 
   return (
     <div
