@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: var(--primary-gradient);
+}
+.form {
+  width: 100%;
+  margin-top: 50px;
+  max-width: 500px;
+  padding: 2rem;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  animation: formAnimation 1s ease;
+}
+.loginLink {
+  text-align: center;
+  color: var(--primary-color);
+}
+.loginLink:hover {
+  color: var(--gray-dark);
+}
+
+@keyframes formAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
