@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../../assets/Logo2.png';
 import profile from '../../../assets/Profile.jpg';
 import mystyle from './AdminNavbar.module.css';
-import { Button, Form, NavItem } from 'react-bootstrap';
+import {  Form } from 'react-bootstrap';
 
 function AdminNavbar() {
     const css = `
@@ -57,7 +57,10 @@ function AdminNavbar() {
                         <h6 className={mystyle.logoText}>UPPLEMENTS</h6>
                     </div>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" >
+                        <i className="fas fa-bars text-white"></i>
+                </Navbar.Toggle>
+
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
 
