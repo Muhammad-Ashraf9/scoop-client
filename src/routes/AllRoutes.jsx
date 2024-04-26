@@ -5,14 +5,13 @@ import {
   Routes,
 } from "react-router-dom";
 import { HomePage } from "../Pages/Home/HomePage.jsx";
-import { ProductList } from "../Pages/Product/ProductList.jsx";
+import ProductList from "../components/ProductList.jsx";
 import { Checkout } from "../Pages/Checkouts/Checkout.jsx";
 import Login from "../Pages/Login.jsx";
 import Cart from "../Pages/Cart/Cart.jsx";
 import Wishlist from "../Pages/Wishlist/Wishlist.jsx";
 import ContactUs from "../Pages/Contact us/Contact-us.jsx";
 import PageNotFound from "../Pages/PageNotFound";
-
 
 export const AllRoutes = () => {
   return (
@@ -28,6 +27,7 @@ export const AllRoutes = () => {
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="Admin" element={<Navigate to="/" />} />
+          <Route path="test" element={<ProductList />} />
         </Routes>
       </Router>
     </>
