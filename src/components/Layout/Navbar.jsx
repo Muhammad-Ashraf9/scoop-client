@@ -6,7 +6,7 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SideCart from "../sideCart";
 
 export function Navbar() {
@@ -41,19 +41,16 @@ export function Navbar() {
   return (
     <>
       <SideCart handleClose={handleClose} show={show} />
-      <nav
-        className="navbar navbar-expand-xl fixed-top "
-        data-bs-theme="dark"
-      >
+      <nav className="navbar navbar-expand-xl fixed-top " data-bs-theme="dark">
         <div className="container-fluid">
           <div className="NavHeader ">
             <div>
-              <a className="navbar-brand brand " href="#">
+              <Link className="navbar-brand brand " to="/">
                 <img width="200px" src={Logo} alt="logo" />
-              </a>
+              </Link>
             </div>
             <div className="NI BrandName mt-3">
-              <a href="#">Scoop Supplements</a>
+              <Link to="/">Scoop Supplements</Link>
             </div>
             <div className="mt-3">
               <a
@@ -76,7 +73,10 @@ export function Navbar() {
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              <h5
+                className="offcanvas-title text-white"
+                id="offcanvasNavbarLabel"
+              >
                 Scoop Supplements
               </h5>
               <button
@@ -89,14 +89,14 @@ export function Navbar() {
             <div className="offcanvas-body Canvas">
               <ul className="navbar-nav me-auto mb-2 mt-lg-2 ">
                 <li className="NI c-item canvasItem ms-3">
-                  <a className="" aria-current="page" href="#">
+                  <NavLink className="" aria-current="page" to="/">
                     HomePage
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="NI c-item canvasItem ms-3">
-                  <a className="" href="#">
+                  <NavLink className="" href="/products">
                     Supplements
-                  </a>
+                  </NavLink>
                 </li>
                 <li
                   className="NI canvasItem c-item dropdown togBtn"
@@ -166,10 +166,10 @@ export function Navbar() {
               SIGN IN
             </NavLink>
 
-            <a href="/wishlist" className="mx-3">
+            <Link to="/wishlist" className="mx-3">
               {" "}
               <FontAwesomeIcon icon={faHeart} />
-            </a>
+            </Link>
             <a href="#" onClick={handleShow}>
               <FontAwesomeIcon icon={faBagShopping} />
             </a>

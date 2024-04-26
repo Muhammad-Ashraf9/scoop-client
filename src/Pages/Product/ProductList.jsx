@@ -62,11 +62,12 @@ export function ProductList() {
     setIsLargeScreen(window.innerWidth >= 992);
   };
   useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, []);
   const chunkedImagesList = chunk(imagesList, isLargeScreen ? 5 : 1); // Adjust the chunk size to 5 items per slide
 
   return (
