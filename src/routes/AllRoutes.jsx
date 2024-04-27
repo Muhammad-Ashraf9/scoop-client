@@ -12,6 +12,7 @@ import Cart from "../Pages/Cart/Cart.jsx";
 import Wishlist from "../Pages/Wishlist/Wishlist.jsx";
 import ContactUs from "../Pages/Contact us/Contact-us.jsx";
 import PageNotFound from "../Pages/PageNotFound";
+import ProductDetails from "../components/ProductDetails.jsx";
 
 export const AllRoutes = () => {
   return (
@@ -28,6 +29,7 @@ export const AllRoutes = () => {
           <Route path="*" element={<PageNotFound />} />
           <Route path="Admin" element={<Navigate to="/" />} />
           <Route path="test" element={<ProductList />} />
+          <Route path="test/:productId" element={<ProductDetails/>} />
         </Routes>
       </Router>
     </>
