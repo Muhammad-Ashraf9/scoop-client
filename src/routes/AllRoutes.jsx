@@ -13,6 +13,8 @@ import Wishlist from "../Pages/Wishlist/Wishlist.jsx";
 import ContactUs from "../Pages/Contact us/Contact-us.jsx";
 import PageNotFound from "../Pages/PageNotFound";
 import ProductDetails from "../components/ProductDetails.jsx";
+import ProductForm from "../Pages/Admin/ProductForm/ProductForm.jsx";
+import AdminDashboard from "../Pages/Admin/AdminDashboard/AdminDashboard.jsx";
 
 export const AllRoutes = () => {
   return (
@@ -27,9 +29,11 @@ export const AllRoutes = () => {
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="*" element={<PageNotFound />} />
-          <Route path="Admin" element={<Navigate to="/" />} />
           <Route path="test" element={<ProductList />} />
-          <Route path="test/:productId" element={<ProductDetails/>} />
+          <Route path="test/:productId" element={<ProductDetails />} />
+          <Route path="admin" element={<AdminDashboard />}>
+            <Route path="add-product" element={<ProductForm />} />
+          </Route>
         </Routes>
       </Router>
     </>
