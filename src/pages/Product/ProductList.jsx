@@ -4,61 +4,61 @@ const list = [
     id: 1,
     title: "Product 1",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 2,
     title: "Product 2",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 3,
     title: "Product 3",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 4,
     title: "Product 4",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 5,
     title: "Product 5",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 6,
     title: "Product 6",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 7,
     title: "Product 7",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 8,
     title: "Product 8",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 9,
     title: "Product 9",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
   {
     id: 10,
     title: "Product 10",
     price: 100,
-    image: "./03149df0-ef7d-44b1-b256-8853ef0e5190.jfif",
+    image: "https://picsum.photos/200",
   },
 ];
 
@@ -70,7 +70,7 @@ function chunk(array, size) {
   return chunkedArr;
 }
 
-export  function ProductList() {
+export function ProductList() {
   const chunkedProductList = chunk(list, 3); // Chunk the list into groups of 3
 
   return (
