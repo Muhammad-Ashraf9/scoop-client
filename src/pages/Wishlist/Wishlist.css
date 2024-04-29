@@ -1,0 +1,15 @@
+.custom-btn-addToCart{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.custom-btn-addToCart:hover{
+    background-color: #DA0037;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    width: 100%;
+}
