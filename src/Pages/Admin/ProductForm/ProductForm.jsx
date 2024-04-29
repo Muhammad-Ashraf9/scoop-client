@@ -15,17 +15,23 @@ export default function ProductForm() {
     // const formData = new FormData(e.target);
     // const data = Object.fromEntries(formData);
     const data = JSON.stringify({
-      title: "test product",
-      price: 13.5,
-      description: "lorem ipsum set",
-      image: "https://i.pravatar.cc",
-      category: "electronic",
+      name: "Ash Protein",
+      description:
+        "High-quality Ash protein supplement for muscle building and recovery.",
+      category: "661abd4620be186540f81404",
+      subcategory: "661abd4620be186540f813fe",
+      price: 99999.99,
+      images: ["https://i.pravatar.cc", "https://picsum.photos/200"],
+      inventory: 99,
     });
     try {
-      await addNewProduct(data).unwrap();
-      navigate("/products");
+      console.log("data :>> ", data);
+      const addedProduct = await addNewProduct(data).unwrap();
+      console.log("addedProduct :>> ", addedProduct);
+      // navigate("/products");
     } catch (error) {
-      setError(error);
+      console.log("error :>> ", error);
+      setError(error.data.message);
     }
   }
   return (
@@ -33,11 +39,9 @@ export default function ProductForm() {
       {isSuccess && (
         <div className="alert alert-success">Product added successfully</div>
       )}
-      {isError && (
-        <div className="alert alert-danger">Failed to add product</div>
-      )}
+      {error && <div className="alert alert-danger">{error}</div>}
+
       {isLoading && <Spinner animation="border" />}
-      {error && <div className="alert alert-danger">{error.message}</div>}
 
       <form onSubmit={handleSubmit} noValidate>
         <div className="mb-3">
